@@ -20,7 +20,7 @@ const products = [
       'Pricier than standard coffee'
     ],
     asin: 'B0CGG395RP',
-    tag: 'bestonamz0e',
+    tag: 'bestonamz0e-20',
     topPick: true
   },
   {
@@ -37,7 +37,7 @@ const products = [
       'Stronger mushroom taste for some'
     ],
     asin: 'B0756D1D39',
-    tag: 'bestonamz0e'
+    tag: 'bestonamz0e-20'
   },
   {
     title: 'RYZE Mushroom Coffee',
@@ -53,7 +53,7 @@ const products = [
       'Less smooth than Four Sigmatic'
     ],
     asin: 'B09Q38X21H',
-    tag: 'bestonamz0e'
+    tag: 'bestonamz0e-20'
   },
   {
     title: 'Everyday Dose',
@@ -69,7 +69,7 @@ const products = [
       'Some may need two scoops'
     ],
     asin: 'B0F1DRXXKR',
-    tag: 'bestonamz0e'
+    tag: 'bestonamz0e-20'
   }
 ];
 
