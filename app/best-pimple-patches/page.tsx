@@ -5,74 +5,75 @@ import Link from 'next/link';
 
 const products = [
   {
-    title: 'Four Sigmatic Original – Best Overall',
-    image: '/images/foursigmatic-original.jpg',
-    description: `Four Sigmatic’s Original Mushroom Coffee is a potent, mushroom-forward blend that supports energy, focus, immunity, and digestion with 1500mg of functional mushrooms. While it contains a small amount of instant coffee to balance flavor, the real magic is in its high dose of Lion’s Mane, Chaga, Turkey Tail and Reishi — plus prebiotics and probiotics.`,
+    title: 'Grace & Stella Pimple Patches – Best Overall',
+    image: '/images/grace-stella-patches.jpg',
+    description: `Grace & Stella's hydrocolloid patches combine science-backed results with playful design. Infused with tea tree oil and salicylic acid, they fight blemishes while soothing skin. Clinically tested and dermatologist-approved.`,
     pros: [
-      'Highest mushroom dose per serving',
-      'Includes coconut creamer and pre/probiotics',
-      'Balanced sweetness with zero crash',
-      'Clinically-backed and highly rated'
+      'Infused with tea tree oil and salicylic acid',
+      'Fun designs: clouds, hearts, flowers',
+      'Clinically proven and derm-tested',
+      'Vegan and cruelty-free'
     ],
     cons: [
-      'Instant only (not brewed)',
-      'Less coffee flavor for purists'
+      'May not suit minimalist preferences',
+      'Slightly pricier per patch'
     ],
-    asin: 'B0CGG395RP',
+    asin: 'B0CPJMSNL1',
     tag: 'bestonamz0e-20',
     topPick: true
   },
   {
-    title: 'Four Sigmatic Ground Focus – Best for Coffee Lovers',
-    image: '/images/foursigmatic-focus.jpg',
-    description: `This organic ground coffee is for those who love the real coffee brewing experience but want added nootropic benefits. It’s made from single-origin, fair-trade Honduran beans and enhanced with 250mg of Lion’s Mane and wild-harvested Chaga. Smooth, full-bodied, and brewed like traditional coffee.`,
+    title: 'Mighty Patch Original by Hero Cosmetics',
+    image: '/images/mighty-patch.jpg',
+    description: `Mighty Patch is a trusted hydrocolloid sticker that works overnight to shrink whiteheads. Great for sensitive skin and dermatologically tested.`,
     pros: [
-      'Brews like normal coffee (drip, French press, pour-over)',
-      'High-quality beans + light mushroom dose',
-      'Low acid and great flavor for daily drinking'
+      '#1 selling acne patch on Amazon',
+      'Absorbs gunk in 6 hours',
+      'Works while you sleep',
+      'Safe for sensitive skin'
     ],
     cons: [
-      'Requires a coffee maker',
-      'Lower mushroom content vs. Original'
+      'Best for whiteheads only',
+      'Peel may tug on dry skin'
     ],
-    asin: 'B0756D1D39',
+    asin: 'B07B9J2K6N',
     tag: 'bestonamz0e-20'
   },
   {
-    title: 'RYZE Mushroom Coffee',
-    image: '/images/ryze.jpg',
-    description: `RYZE is a full-spectrum instant mushroom coffee with 2000mg of functional fungi: Cordyceps, Lion’s Mane, Turkey Tail, Shiitake, King Trumpet, and Reishi. It’s strong on earthy flavor and includes MCT oil for brain fuel. USDA Organic and grown in California.`,
+    title: 'COSRX Acne Pimple Master Patch',
+    image: '/images/cosrx-patches.jpg',
+    description: `K-beauty favorite with hypoallergenic A.D.F. hydrocolloid. Supports healing while preventing bacteria exposure. Trusted for years globally.`,
     pros: [
-      '6 types of mushrooms + MCT oil',
-      'USDA Organic, USA-grown',
-      'High beta-glucan content'
+      'Gentle and effective healing',
+      'Simple, minimal ingredients',
+      'Korean cult favorite'
     ],
     cons: [
-      'Earthy flavor may be intense for some',
-      'Less smooth than Four Sigmatic blends'
+      'Less invisible under makeup',
+      'Not ideal for deep cystic acne'
     ],
-    asin: 'B09Q38X21H',
+    asin: 'B014SAB948',
     tag: 'bestonamz0e-20'
   },
   {
-    title: 'Everyday Dose',
-    image: '/images/everydaydose.jpg',
-    description: `Everyday Dose combines low-caffeine coffee extract with collagen, L-Theanine, Chaga and Lion’s Mane. Designed for focus, calm, and beauty benefits, it’s especially popular for gut and skin support.`,
+    title: 'Rael Beauty Miracle Patch',
+    image: '/images/rael-patches.jpg',
+    description: `Rael’s patches are ultra-thin, matte, and blend well under makeup. Hypoallergenic, non-drying, and vegan—ideal for day or night use.`,
     pros: [
-      'Includes collagen for skin and joints',
-      'Very low caffeine (80% less)',
-      'Balanced focus and calm from L-Theanine'
+      'Thin, seamless application',
+      'Great adhesion overnight',
+      'Hypoallergenic and vegan'
     ],
     cons: [
-      'Light coffee flavor',
-      'Best used with two scoops for full benefit'
+      'May roll off oily skin',
+      'Takes longer to work for some'
     ],
-    asin: 'B0F1DRXXKR',
+    asin: 'B07G1VKCND',
     tag: 'bestonamz0e-20'
   }
 ];
 
-export default function BestMushroomCoffees() {
+export default function BestPimplePatches() {
   const [amazonDomain, setAmazonDomain] = useState('amazon.com');
 
   useEffect(() => {
@@ -83,8 +84,8 @@ export default function BestMushroomCoffees() {
   return (
     <>
       <Head>
-        <title>Best Mushroom Coffees on Amazon (2025)</title>
-        <meta name="description" content="Compare the best mushroom coffee blends on Amazon. Discover adaptogenic brews from Four Sigmatic, RYZE, and more to boost focus and immunity without the crash." />
+        <title>Best Pimple Patches on Amazon (2025)</title>
+        <meta name="description" content="Compare the best hydrocolloid pimple patches on Amazon in 2025 – featuring Grace & Stella, Mighty Patch, COSRX and Rael. Clear skin, fast." />
       </Head>
 
       <main className="bg-white text-gray-900 font-sans">
@@ -108,9 +109,9 @@ export default function BestMushroomCoffees() {
 
         {/* Main Section */}
         <section className="px-4 md:px-12 py-10 max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-2">Top Mushroom Coffee Brands (Updated 2025)</h2>
+          <h2 className="text-3xl font-bold mb-2">Top Hydrocolloid Pimple Patches (2025)</h2>
           <p className="text-gray-700 mb-8 max-w-2xl">
-            Looking to boost mental clarity, immune health, and creativity? We reviewed the top mushroom coffee brands on Amazon to help you find the best-tasting and most effective blends.
+            Want to shrink zits fast and stop picking? We reviewed Amazon’s most trusted acne patches for performance, safety, and value.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
