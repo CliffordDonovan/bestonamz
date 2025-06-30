@@ -11,9 +11,4 @@ export default function RootLayout({ children }) {
       </body>
     </html>
   );
-export const metadata = {
-  title: 'BestOnAmz – Honest Amazon Product Reviews',
-  description: 'Explore the best Amazon products with expert-reviewed, SEO-rich affiliate content. Updated for 2025.',
-};
-
 }
