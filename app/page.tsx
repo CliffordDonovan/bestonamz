@@ -1,103 +1,86 @@
-import Image from "next/image";
+'use client';
+
+import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <Head>
+        <title>BestOnAmz – Expert Amazon Product Roundups (2025)</title>
+        <meta name="description" content="Discover the best Amazon products by category. Honest, curated reviews to help you find the best gear, gadgets, wellness items and more." />
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      <main className="bg-white text-gray-900 font-sans">
+        {/* Header */}
+        <header className="flex flex-wrap justify-between items-center border-b px-4 py-3 md:px-12 bg-gray-100 shadow-sm">
+          <div className="flex items-center space-x-3">
+            <img src="/images/logo.jpg" alt="BestOnAmz Logo" className="w-16 h-16 rounded-full" />
+            <h1 className="text-2xl font-bold">BestOnAmz</h1>
+          </div>
+          <nav className="flex gap-6 text-sm font-medium">
+            <Link href="/">Home</Link>
+            <Link href="/categories">Categories</Link>
+            <Link href="/about">About</Link>
+            <Link href="/contact">Contact</Link>
+          </nav>
+          <input type="search" placeholder="Search..." className="border text-sm px-2 py-1 rounded" />
+        </header>
+
+        {/* Hero */}
+        <section className="text-center px-4 md:px-12 py-16 bg-white">
+          <h2 className="text-4xl font-bold mb-4">Welcome to BestOnAmz.com</h2>
+          <p className="text-gray-700 max-w-2xl mx-auto mb-6">
+            We help you find top-rated Amazon products with expert roundups you can trust.
+            Whether you’re looking for coffee alternatives, kitchen essentials, or health upgrades —
+            we’ve got you covered with clean, affiliate-supported reviews.
+          </p>
+          <Link href="/best-mushroom-coffees">
+            <span className="inline-block bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition">
+              Start Exploring Reviews
+            </span>
+          </Link>
+        </section>
+
+        {/* Categories */}
+        <section className="py-12 px-4 md:px-12 bg-gray-50">
+          <h3 className="text-2xl font-bold text-center mb-8">Top Categories</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              { title: "Wellness & Adaptogens", href: "/best-mushroom-coffees", img: "/images/category-wellness.jpg" },
+              { title: "Home Office Gear", href: "/best-monitor-arms", img: "/images/category-homeoffice.jpg" },
+              { title: "Portable Blenders", href: "/best-portable-blenders", img: "/images/category-blenders.jpg" },
+              { title: "Kitchen Gadgets", href: "/best-kitchen-tools", img: "/images/category-kitchen.jpg" },
+              { title: "Fitness & Mobility", href: "/best-foam-rollers", img: "/images/category-fitness.jpg" },
+              { title: "Tech & Accessories", href: "/best-usb-c-hubs", img: "/images/category-tech.jpg" }
+            ].map((cat, i) => (
+              <Link href={cat.href} key={i} className="bg-white rounded-lg border hover:shadow-lg transition block">
+                <img src={cat.img} alt={cat.title} className="w-full h-48 object-cover rounded-t-lg" />
+                <div className="p-4">
+                  <h4 className="font-semibold text-lg">{cat.title}</h4>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Value Prop Section */}
+        <section className="py-12 px-4 md:px-12 bg-white border-t">
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-2xl font-bold mb-4">Why BestOnAmz?</h3>
+            <p className="text-gray-700 text-base">
+              Unlike auto-generated affiliate sites, we manually research and test products to recommend the best of Amazon.
+              Our team includes SEO strategists, copywriters, and product researchers dedicated to creating helpful, no-fluff roundups that earn your trust.
+            </p>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-gray-100 border-t mt-10 py-8 text-center text-sm text-gray-600">
+          <div className="mb-2">© {new Date().getFullYear()} BestOnAmz.com – All rights reserved.</div>
+          <div>As an Amazon Associate, we earn from qualifying purchases.</div>
+        </footer>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
