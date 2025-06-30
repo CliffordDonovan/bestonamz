@@ -32,3 +32,4 @@ export default function RootLayout({
     </html>
   );
 }
+<body className="bg-white min-h-screen">{children}</body>
