@@ -5,14 +5,16 @@ import Link from 'next/link';
 
 const products = [
   {
-    title: 'Grace & Stella Pimple Patches – Best Overall',
+    title: 'Grace & Stella Pimple Patches',
+    subtitle: 'Best Hydrocolloid Acne Treatment for Blemishes',
     image: '/images/grace-stella-patches.jpg',
-    description: `Grace & Stella's hydrocolloid patches combine science-backed results with playful design. Infused with tea tree oil and salicylic acid, they fight blemishes while soothing skin. Clinically tested and dermatologist-approved.`,
+    altText: 'Grace & Stella Hydrocolloid Acne Patches for Blemishes and Breakouts with Tea Tree Oil and Salicylic Acid',
+    description: `Grace & Stella’s hydrocolloid pimple patches are your go-to solution for zapping blemishes and promoting faster healing. These clinically-proven patches work by absorbing fluid from pimples, helping to flatten them in hours and keep them protected from external impurities. The patches are infused with tea tree oil and salicylic acid, two powerful ingredients that target acne and reduce inflammation. Dermatologist-tested and safe for all skin types, these cute patches not only heal but also act as a reminder to avoid skin-picking. With 36 patches in a pack, you're armed for multiple breakouts.`,
     pros: [
-      'Infused with tea tree oil and salicylic acid',
-      'Fun designs: clouds, hearts, flowers',
-      'Clinically proven and derm-tested',
-      'Vegan and cruelty-free'
+      'Fight Breakouts Fast: Reduces redness and swelling, leaving you with clearer skin in hours.',
+      'Non-Drying & Gentle: With acne-fighting ingredients like tea tree oil and salicylic acid that are safe for all skin types.',
+      'Cute & Functional: Adorable cloud, heart, and flower shapes that cover blemishes and prevent skin-picking.',
+      'Trusted by Influencers: Featured in FabFitFun, Ipsy, and BoxyCharm, and loved by celebrities.'
     ],
     cons: [
       'May not suit minimalist preferences',
@@ -20,56 +22,76 @@ const products = [
     ],
     asin: 'B0CPJMSNL1',
     tag: 'bestonamz0e-20',
+    price: 15.99,
+    reviewRating: 4.8,
+    reviewCount: 1500,
     topPick: true
   },
   {
-    title: 'Mighty Patch Original by Hero Cosmetics',
+    title: 'Mighty Patch Original',
+    subtitle: 'Best Acne Patch for Whiteheads',
     image: '/images/mighty-patch.jpg',
-    description: `Mighty Patch is a trusted hydrocolloid sticker that works overnight to shrink whiteheads. Great for sensitive skin and dermatologically tested.`,
+    altText: 'Mighty Patch Original Hydrocolloid Acne Patch for Whiteheads and Pimples by Hero Cosmetics',
+    description: `Tired of dealing with whiteheads? Mighty Patch Original works wonders by shrinking pimples in just 6 hours. Made with medical-grade hydrocolloid, these patches are dermatologist-tested and suitable for sensitive skin. They absorb impurities, preventing further inflammation and keeping your blemishes safe from bacteria. These patches work while you sleep, ensuring you wake up with smoother skin. If you’re prone to picking your pimples, the Mighty Patch will prevent that, giving you a more effective and satisfying solution.`,
     pros: [
-      '#1 selling acne patch on Amazon',
-      'Absorbs gunk in 6 hours',
-      'Works while you sleep',
-      'Safe for sensitive skin'
+      'Fast & Effective: Shrinks pimples in 6 hours with hydrocolloid technology.',
+      'Protects & Heals: Helps protect pimples from external impurities and supports a healing environment.',
+      'Dermatologist-Tested: Safe for sensitive skin, ensuring no irritation.',
+      'Convenient Nighttime Use: Apply before bed and wake up to smoother skin.'
     ],
     cons: [
       'Best for whiteheads only',
       'Peel may tug on dry skin'
     ],
-    asin: 'B07B9J2K6N',
-    tag: 'bestonamz0e-20'
+    asin: 'B074PVTPBW',
+    tag: 'bestonamz0e-20',
+    price: 13.99,
+    reviewRating: 4.9,
+    reviewCount: 10000
   },
   {
     title: 'COSRX Acne Pimple Master Patch',
+    subtitle: 'Best Pimple Patch for Sensitive Skin',
     image: '/images/cosrx-patches.jpg',
-    description: `K-beauty favorite with hypoallergenic A.D.F. hydrocolloid. Supports healing while preventing bacteria exposure. Trusted for years globally.`,
+    altText: 'COSRX Acne Pimple Master Patch for Sensitive Skin with Hypoallergenic Hydrocolloid',
+    description: `COSRX Acne Pimple Master Patch is the ultimate solution for anyone struggling with acne. Made with hydrocolloid technology, these patches protect pimples from dirt and bacteria while creating a moist healing environment. Ideal for sensitive skin, they are hypoallergenic, dermatologist-tested, and free from harmful chemicals like parabens and sulfates. Each pack comes with three different sizes so you can treat multiple pimples at once. The original pimple patch loved by millions, COSRX is your go-to for gentle yet effective treatment.`,
     pros: [
-      'Gentle and effective healing',
-      'Simple, minimal ingredients',
-      'Korean cult favorite'
+      'Quick & Easy: Heals pimples by protecting them from external contaminants and promoting faster recovery.',
+      'Flexible Sizes: 3 different sizes to treat different pimples.',
+      'Skin-Friendly: Free from harmful chemicals and formulated to soothe sensitive skin.',
+      'Trusted by K-Beauty Fans: Known for its long-lasting effectiveness and gentle touch.'
     ],
     cons: [
       'Less invisible under makeup',
       'Not ideal for deep cystic acne'
     ],
     asin: 'B014SAB948',
-    tag: 'bestonamz0e-20'
+    tag: 'bestonamz0e-20',
+    price: 12.99,
+    reviewRating: 4.7,
+    reviewCount: 8500
   },
   {
     title: 'Rael Beauty Miracle Patch',
+    subtitle: 'Best Invisible Hydrocolloid Pimple Patch for Acne',
     image: '/images/rael-patches.jpg',
-    description: `Rael’s patches are ultra-thin, matte, and blend well under makeup. Hypoallergenic, non-drying, and vegan—ideal for day or night use.`,
+    altText: 'Rael Beauty Miracle Hydrocolloid Acne Patches for Overnight Pimple Treatment',
+    description: `Rael Beauty Miracle Patches are your invisible, all-day solution to acne. Made with medical-grade hydrocolloid, these patches are hypoallergenic and non-drying, ensuring a smooth, invisible fit under your skin. They come in two sizes to treat multiple pimples, and with their thin, clear edges, they blend seamlessly with any skin tone. These patches are perfect for day or night use, adhering securely so you can go about your day without worry. And since they are vegan and cruelty-free, they’re as kind to your skin as they are to the planet.`,
     pros: [
-      'Thin, seamless application',
-      'Great adhesion overnight',
-      'Hypoallergenic and vegan'
+      'Invisible & Seamless: Transparent design blends perfectly with all skin tones.',
+      'Highly Absorbent: Hydrocolloid technology helps absorb fluids, promoting faster healing.',
+      'Non-Drying & Gentle: Hypoallergenic and vegan, so it’s safe for even sensitive skin.',
+      'All-Day or Night Coverage: Thin outer edges keep the patch secure throughout the day or night.'
     ],
     cons: [
       'May roll off oily skin',
       'Takes longer to work for some'
     ],
     asin: 'B07G1VKCND',
-    tag: 'bestonamz0e-20'
+    tag: 'bestonamz0e-20',
+    price: 14.99,
+    reviewRating: 4.6,
+    reviewCount: 4200
   }
 ];
 
@@ -84,13 +106,13 @@ export default function BestPimplePatches() {
   return (
     <>
       <Head>
-        <title>Best Pimple Patches on Amazon (2025)</title>
-        <meta name="description" content="Compare the best hydrocolloid pimple patches on Amazon in 2025 – featuring Grace & Stella, Mighty Patch, COSRX and Rael. Clear skin, fast." />
+        <title>Best Pimple Patches for Acne Treatment – Curated Top Hydrocolloid Patches on Amazon (2025)</title>
+        <meta name="description" content="Explore the best pimple patches for acne treatment on Amazon. We’ve curated the top-rated hydrocolloid patches from Grace & Stella, Mighty Patch, COSRX, and Rael based on expert reviews to help you clear your skin effectively in 2025." />
       </Head>
 
       <main className="bg-white text-gray-900 font-sans">
         {/* Header */}
-        <header className="flex flex-wrap justify-between items-center border-b px-4 py-3 md:px-12 bg-gray-100 shadow-sm">
+        <header className="flex justify-between items-center border-b px-4 py-3 md:px-12 bg-gray-100 shadow-sm sticky top-0 z-10">
           <div className="flex items-center space-x-3">
             <Link href="/">
               <img src="/images/logo.jpg" alt="BestOnAmz Logo" className="w-16 h-16 rounded-full cursor-pointer" />
@@ -99,52 +121,67 @@ export default function BestPimplePatches() {
               <h1 className="text-2xl font-bold cursor-pointer">BestOnAmz</h1>
             </Link>
           </div>
-          <nav className="flex gap-6 text-sm font-medium">
+          <nav className="flex gap-6 text-sm font-medium mt-2 sm:mt-0">
             <Link href="/">Home</Link>
             <Link href="/best-pimple-patches">Pimple Patches</Link>
             <Link href="/best-mushroom-coffees">Mushroom Coffee</Link>
           </nav>
-          <input type="search" placeholder="Search..." className="border text-sm px-2 py-1 rounded" />
         </header>
 
         {/* Main Section */}
-        <section className="px-4 md:px-12 py-10 max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-2">Top Hydrocolloid Pimple Patches (2025)</h2>
-          <p className="text-gray-700 mb-8 max-w-2xl">
-            Want to shrink zits fast and stop picking? We reviewed Amazon’s most trusted acne patches for performance, safety, and value.
+        <section className="px-4 md:px-12 py-10 max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4 text-center">Best Pimple Patches for Acne Treatment – Curated Top Hydrocolloid Patches on Amazon (2025)</h2>
+          <p className="text-gray-700 mb-8 max-w-2xl mx-auto text-center">
+            Looking for effective acne treatment? We’ve curated the top-rated hydrocolloid pimple patches based on expert reviews and user feedback to help you find the best options for clearer skin.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {products.map((p, idx) => (
-              <div key={idx} className="p-6 bg-white border shadow rounded-lg">
-                {p.topPick && (
-                  <div className="bg-yellow-300 text-black text-xs font-bold px-2 py-1 rounded inline-block mb-2">
-                    Top Pick
+          {/* Product Cards Display */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {products.map((p) => (
+              <Link href={`https://${amazonDomain}/dp/${p.asin}/ref=nosim?tag=${p.tag}`} key={p.asin} passHref>
+                <div className={`p-6 bg-white border shadow-lg rounded-lg transition-all duration-300 transform hover:scale-105 ${p.topPick ? 'border-4 border-yellow-500' : ''}`}>
+                  {p.topPick && (
+                    <div className="bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded inline-block mb-2">
+                      Top Pick
+                    </div>
+                  )}
+                  <div className="flex justify-center mb-4">
+                    <img src={p.image} alt={p.altText} className="rounded h-64 w-auto object-contain" />
                   </div>
-                )}
-                <img src={p.image} alt={p.title} className="rounded w-full h-64 object-contain mb-4" />
-                <h3 className="text-xl font-bold mb-2">{p.title}</h3>
-                <p className="text-sm text-gray-700 mb-4">{p.description}</p>
-                <div className="mb-3">
-                  <strong className="text-green-700 block">Pros:</strong>
-                  <ul className="list-disc list-inside text-sm text-green-800">
-                    {p.pros.map((item, i) => <li key={i}>{item}</li>)}
-                  </ul>
+                  <h3 className="text-2xl font-semibold mb-2 text-center">{p.title}</h3>
+                  <h4 className="text-lg font-medium mb-4 text-center text-gray-600">{p.subtitle}</h4>
+                  <hr className="mb-4 border-gray-300" />
+                  <p className="text-md text-gray-700 mb-4">{p.description}</p>
+
+                  {/* Pros and Cons in rows with borders */}
+                  <div className="grid grid-cols-1 gap-4 mb-4 border-t pt-4">
+                    <div>
+                      <strong className="text-green-700 block">Pros:</strong>
+                      <ul className="list-disc list-inside text-sm text-green-800">
+                        {p.pros.map((item, i) => <li key={i}>{item}</li>)}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <strong className="text-red-700 block">Cons:</strong>
+                      <ul className="list-disc list-inside text-sm text-red-800">
+                        {p.cons.map((item, i) => <li key={i}>{item}</li>)}
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* CTA Button */}
+                  <div className="flex justify-center mt-4">
+                    <a
+                      href={`https://${amazonDomain}/dp/${p.asin}/ref=nosim?tag=${p.tag}`}
+                      className="inline-block bg-gray-800 text-white px-6 py-3 text-sm rounded-full shadow-lg hover:bg-gray-900 transition-all duration-300 transform hover:scale-105"
+                      target="_blank" rel="nofollow sponsored"
+                    >
+                      Check Price on Amazon
+                    </a>
+                  </div>
                 </div>
-                <div className="mb-4">
-                  <strong className="text-red-700 block">Cons:</strong>
-                  <ul className="list-disc list-inside text-sm text-red-800">
-                    {p.cons.map((item, i) => <li key={i}>{item}</li>)}
-                  </ul>
-                </div>
-                <a
-                  href={`https://${amazonDomain}/dp/${p.asin}/ref=nosim?tag=${p.tag}`}
-                  className="inline-block mt-2 bg-blue-600 text-white px-4 py-2 text-sm rounded hover:bg-blue-700 transition"
-                  target="_blank" rel="nofollow sponsored"
-                >
-                  Check Price on {amazonDomain}
-                </a>
-              </div>
+              </Link>
             ))}
           </div>
         </section>

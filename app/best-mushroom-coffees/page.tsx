@@ -5,9 +5,10 @@ import Link from 'next/link';
 
 const products = [
   {
-    title: 'Four Sigmatic Original – Best Overall',
+    title: 'Four Sigmatic Original Mushroom Coffee',  // Updated title
+    subtitle: 'Best Overall Mushroom Coffee',
     image: '/images/foursigmatic-original.jpg',
-    description: `Four Sigmatic’s Original Mushroom Coffee is a potent, mushroom-forward blend that supports energy, focus, immunity, and digestion with 1500mg of functional mushrooms. While it contains a small amount of instant coffee to balance flavor, the real magic is in its high dose of Lion’s Mane, Chaga, Turkey Tail and Reishi — plus prebiotics and probiotics.`,
+    description: `Four Sigmatic’s Original Mushroom Coffee is a potent, mushroom-forward blend that supports energy, focus, immunity, and digestion with 1500mg of functional mushrooms. While it contains a small amount of instant coffee to balance flavor, the real magic is in its high dose of Lion’s Mane, Chaga, Turkey Tail, and Reishi — plus prebiotics and probiotics.`,
     pros: [
       'Highest mushroom dose per serving',
       'Includes coconut creamer and pre/probiotics',
@@ -23,7 +24,8 @@ const products = [
     topPick: true
   },
   {
-    title: 'Four Sigmatic Ground Focus – Best for Coffee Lovers',
+    title: 'Four Sigmatic Focus Ground Coffee',  // Updated title
+    subtitle: 'Best Mushroom Coffee for Taste',  // Updated subtitle
     image: '/images/foursigmatic-focus.jpg',
     description: `This organic ground coffee is for those who love the real coffee brewing experience but want added nootropic benefits. It’s made from single-origin, fair-trade Honduran beans and enhanced with 250mg of Lion’s Mane and wild-harvested Chaga. Smooth, full-bodied, and brewed like traditional coffee.`,
     pros: [
@@ -39,7 +41,8 @@ const products = [
     tag: 'bestonamz0e-20'
   },
   {
-    title: 'RYZE Mushroom Coffee',
+    title: 'RYZE Mushroom Coffee',  // Updated title
+    subtitle: 'Most Popular Mushroom Coffee',
     image: '/images/ryze.jpg',
     description: `RYZE is a full-spectrum instant mushroom coffee with 2000mg of functional fungi: Cordyceps, Lion’s Mane, Turkey Tail, Shiitake, King Trumpet, and Reishi. It’s strong on earthy flavor and includes MCT oil for brain fuel. USDA Organic and grown in California.`,
     pros: [
@@ -55,9 +58,10 @@ const products = [
     tag: 'bestonamz0e-20'
   },
   {
-    title: 'Everyday Dose',
+    title: 'Everyday Dose',  // Updated title
+    subtitle: 'Best for Mushroom Lovers',  // Updated subtitle
     image: '/images/everydaydose.jpg',
-    description: `Everyday Dose combines low-caffeine coffee extract with collagen, L-Theanine, Chaga and Lion’s Mane. Designed for focus, calm, and beauty benefits, it’s especially popular for gut and skin support.`,
+    description: `Everyday Dose combines low-caffeine coffee extract with collagen, L-Theanine, Chaga, and Lion’s Mane. Designed for mushroom lovers who want to enjoy a healthy, functional coffee alternative, it’s especially popular for gut, skin, and brain support.`,
     pros: [
       'Includes collagen for skin and joints',
       'Very low caffeine (80% less)',
@@ -89,7 +93,7 @@ export default function BestMushroomCoffees() {
 
       <main className="bg-white text-gray-900 font-sans">
         {/* Header */}
-        <header className="flex flex-wrap justify-between items-center border-b px-4 py-3 md:px-12 bg-gray-100 shadow-sm">
+        <header className="flex justify-between items-center border-b px-4 py-3 md:px-12 bg-gray-100 shadow-sm sticky top-0 z-10">
           <div className="flex items-center space-x-3">
             <Link href="/">
               <img src="/images/logo.jpg" alt="BestOnAmz Logo" className="w-16 h-16 rounded-full cursor-pointer" />
@@ -98,52 +102,67 @@ export default function BestMushroomCoffees() {
               <h1 className="text-2xl font-bold cursor-pointer">BestOnAmz</h1>
             </Link>
           </div>
-          <nav className="flex gap-6 text-sm font-medium">
+          <nav className="flex gap-6 text-sm font-medium mt-2 sm:mt-0">
             <Link href="/">Home</Link>
             <Link href="/best-pimple-patches">Pimple Patches</Link>
             <Link href="/best-mushroom-coffees">Mushroom Coffee</Link>
           </nav>
-          <input type="search" placeholder="Search..." className="border text-sm px-2 py-1 rounded" />
         </header>
 
         {/* Main Section */}
-        <section className="px-4 md:px-12 py-10 max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-2">Top Mushroom Coffee Brands (Updated 2025)</h2>
-          <p className="text-gray-700 mb-8 max-w-2xl">
+        <section className="px-4 md:px-12 py-10 max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4 text-center">Top Mushroom Coffee Brands (Updated 2025)</h2>
+          <p className="text-gray-700 mb-8 max-w-2xl mx-auto text-center">
             Looking to boost mental clarity, immune health, and creativity? We reviewed the top mushroom coffee brands on Amazon to help you find the best-tasting and most effective blends.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {products.map((p, idx) => (
-              <div key={idx} className="p-6 bg-white border shadow rounded-lg">
-                {p.topPick && (
-                  <div className="bg-yellow-300 text-black text-xs font-bold px-2 py-1 rounded inline-block mb-2">
-                    Top Pick
+          {/* Product Cards Display */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {products.map((p) => (
+              <Link href={`https://${amazonDomain}/dp/${p.asin}/ref=nosim?tag=${p.tag}`} key={p.asin} passHref>
+                <div className={`p-6 bg-white border shadow-lg rounded-lg transition-all duration-300 transform hover:scale-105 ${p.topPick ? 'border-4 border-yellow-500' : ''}`}>
+                  {p.topPick && (
+                    <div className="bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded inline-block mb-2">
+                      Top Pick
+                    </div>
+                  )}
+                  <div className="flex justify-center mb-4">
+                    <img src={p.image} alt={p.title} className="rounded h-64 w-auto object-contain" />
                   </div>
-                )}
-                <img src={p.image} alt={p.title} className="rounded w-full h-64 object-contain mb-4" />
-                <h3 className="text-xl font-bold mb-2">{p.title}</h3>
-                <p className="text-sm text-gray-700 mb-4">{p.description}</p>
-                <div className="mb-3">
-                  <strong className="text-green-700 block">Pros:</strong>
-                  <ul className="list-disc list-inside text-sm text-green-800">
-                    {p.pros.map((item, i) => <li key={i}>{item}</li>)}
-                  </ul>
+                  <h3 className="text-2xl font-semibold mb-2 text-center">{p.title}</h3>
+                  <h4 className="text-lg font-medium mb-4 text-center text-gray-600">{p.subtitle}</h4>
+                  <hr className="mb-4 border-gray-300" />
+                  <p className="text-md text-gray-700 mb-4">{p.description}</p>
+
+                  {/* Pros and Cons in rows with borders */}
+                  <div className="grid grid-cols-1 gap-4 mb-4 border-t pt-4">
+                    <div>
+                      <strong className="text-green-700 block">Pros:</strong>
+                      <ul className="list-disc list-inside text-sm text-green-800">
+                        {p.pros.map((item, i) => <li key={i}>{item}</li>)}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <strong className="text-red-700 block">Cons:</strong>
+                      <ul className="list-disc list-inside text-sm text-red-800">
+                        {p.cons.map((item, i) => <li key={i}>{item}</li>)}
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* CTA Button */}
+                  <div className="flex justify-center mt-4">
+                    <a
+                      href={`https://${amazonDomain}/dp/${p.asin}/ref=nosim?tag=${p.tag}`}
+                      className="inline-block bg-gray-800 text-white px-6 py-3 text-sm rounded-full shadow-lg hover:bg-gray-900 transition-all duration-300 transform hover:scale-105"
+                      target="_blank" rel="nofollow sponsored"
+                    >
+                      Check Price on Amazon
+                    </a>
+                  </div>
                 </div>
-                <div className="mb-4">
-                  <strong className="text-red-700 block">Cons:</strong>
-                  <ul className="list-disc list-inside text-sm text-red-800">
-                    {p.cons.map((item, i) => <li key={i}>{item}</li>)}
-                  </ul>
-                </div>
-                <a
-                  href={`https://${amazonDomain}/dp/${p.asin}/ref=nosim?tag=${p.tag}`}
-                  className="inline-block mt-2 bg-blue-600 text-white px-4 py-2 text-sm rounded hover:bg-blue-700 transition"
-                  target="_blank" rel="nofollow sponsored"
-                >
-                  Check Price on {amazonDomain}
-                </a>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
