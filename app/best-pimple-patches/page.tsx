@@ -1,11 +1,28 @@
 'use client';
-
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Navbar from '@/components/Navbar'; // Import Navbar component
 import Link from 'next/link';
 
-const products = [
+// Define the types of products, including 'bestValue' for those that need it.
+interface Product {
+  title: string;
+  subtitle: string;
+  image: string;
+  altText: string;
+  description: string;
+  pros: string[];
+  cons: string[];
+  asin: string;
+  tag: string;
+  price: number;
+  reviewRating: number;
+  reviewCount: number;
+  topPick: boolean;
+  bestValue?: boolean; // 'bestValue' is optional
+}
+
+const products: Product[] = [
   {
     title: 'Grace & Stella Pimple Patches',
     subtitle: 'Best Hydrocolloid Acne Treatment for Blemishes',
@@ -49,7 +66,8 @@ const products = [
     tag: 'bestonamz0e-20',
     price: 13.99,
     reviewRating: 4.9,
-    reviewCount: 10000
+    reviewCount: 10000,
+    topPick: false
   },
   {
     title: 'COSRX Acne Pimple Master Patch',
@@ -71,7 +89,8 @@ const products = [
     tag: 'bestonamz0e-20',
     price: 12.99,
     reviewRating: 4.7,
-    reviewCount: 8500
+    reviewCount: 8500,
+    topPick: false
   },
   {
     title: 'Rael Beauty Miracle Patch',
@@ -93,7 +112,8 @@ const products = [
     tag: 'bestonamz0e-20',
     price: 14.99,
     reviewRating: 4.6,
-    reviewCount: 4200
+    reviewCount: 4200,
+    topPick: false
   }
 ];
 
