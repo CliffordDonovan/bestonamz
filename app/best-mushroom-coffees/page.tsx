@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Navbar from '@/components/Navbar'; // Import Navbar component
@@ -6,8 +7,8 @@ import Link from 'next/link';
 
 const products = [
   {
-    title: 'Four Sigmatic Original Mushroom Coffee',  // Updated title
-    subtitle: 'Best Overall Mushroom Coffee',  // Updated subtitle
+    title: 'Four Sigmatic Original Mushroom Coffee', // Updated title
+    subtitle: 'Best Overall Mushroom Coffee', // Updated subtitle
     image: '/images/foursigmatic-original.jpg',
     description: `Four Sigmatic’s Original Mushroom Coffee is a potent, mushroom-forward blend that supports energy, focus, immunity, and digestion with 1500mg of functional mushrooms. While it contains a small amount of instant coffee to balance flavor, the real magic is in its high dose of Lion’s Mane, Chaga, Turkey Tail, and Reishi — plus prebiotics and probiotics.`,
     pros: [
@@ -22,11 +23,12 @@ const products = [
     ],
     asin: 'B0CGG395RP',
     tag: 'bestonamz0e-20',
-    topPick: true
+    topPick: true,
+    bestValue: true, // Set to true for the "Best Value" badge
   },
   {
-    title: 'Four Sigmatic Focus Ground Coffee',  // Updated title
-    subtitle: 'Best Mushroom Coffee for Taste',  // Updated subtitle
+    title: 'Four Sigmatic Focus Ground Coffee', // Updated title
+    subtitle: 'Best Mushroom Coffee for Taste', // Updated subtitle
     image: '/images/foursigmatic-focus.jpg',
     description: `This organic ground coffee is for those who love the real coffee brewing experience but want added nootropic benefits. It’s made from single-origin, fair-trade Honduran beans and enhanced with 250mg of Lion’s Mane and wild-harvested Chaga. Smooth, full-bodied, and brewed like traditional coffee.`,
     pros: [
@@ -39,11 +41,11 @@ const products = [
       'Lower mushroom content vs. Original'
     ],
     asin: 'B0756D1D39',
-    tag: 'bestonamz0e-20'
+    tag: 'bestonamz0e-20',
   },
   {
-    title: 'RYZE Mushroom Coffee',  // Updated title
-    subtitle: 'Most Popular Mushroom Coffee',  // Updated subtitle
+    title: 'RYZE Mushroom Coffee', // Updated title
+    subtitle: 'Most Popular Mushroom Coffee', // Updated subtitle
     image: '/images/ryze.jpg',
     description: `RYZE is a full-spectrum instant mushroom coffee with 2000mg of functional fungi: Cordyceps, Lion’s Mane, Turkey Tail, Shiitake, King Trumpet, and Reishi. It’s strong on earthy flavor and includes MCT oil for brain fuel. USDA Organic and grown in California.`,
     pros: [
@@ -56,11 +58,11 @@ const products = [
       'Less smooth than Four Sigmatic blends'
     ],
     asin: 'B09Q38X21H',
-    tag: 'bestonamz0e-20'
+    tag: 'bestonamz0e-20',
   },
   {
-    title: 'Everyday Dose',  // Updated title
-    subtitle: 'Best for Mushroom Lovers',  // Updated subtitle
+    title: 'Everyday Dose', // Updated title
+    subtitle: 'Best for Mushroom Lovers', // Updated subtitle
     image: '/images/everydaydose.jpg',
     description: `Everyday Dose combines low-caffeine coffee extract with collagen, L-Theanine, Chaga, and Lion’s Mane. Designed for mushroom lovers who want to enjoy a healthy, functional coffee alternative, it’s especially popular for gut, skin, and brain support.`,
     pros: [
@@ -73,7 +75,7 @@ const products = [
       'Best used with two scoops for full benefit'
     ],
     asin: 'B0F1DRXXKR',
-    tag: 'bestonamz0e-20'
+    tag: 'bestonamz0e-20',
   }
 ];
 
@@ -89,7 +91,10 @@ export default function BestMushroomCoffees() {
     <>
       <Head>
         <title>Best Mushroom Coffees on Amazon (2025)</title>
-        <meta name="description" content="Compare the best mushroom coffee blends on Amazon. Discover adaptogenic brews from Four Sigmatic, RYZE, and more to boost focus and immunity without the crash." />
+        <meta
+          name="description"
+          content="Compare the best mushroom coffee blends on Amazon. Discover adaptogenic brews from Four Sigmatic, RYZE, and more to boost focus and immunity without the crash."
+        />
       </Head>
 
       <main className="bg-white text-gray-900 font-sans">

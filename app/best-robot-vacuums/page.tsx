@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Navbar from '@/components/Navbar'; // Import Navbar component
