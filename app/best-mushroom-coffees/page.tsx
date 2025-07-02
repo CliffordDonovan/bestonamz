@@ -1,12 +1,13 @@
 'use client';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import Navbar from '@/components/Navbar'; // Import Navbar component
 import Link from 'next/link';
 
 const products = [
   {
     title: 'Four Sigmatic Original Mushroom Coffee',  // Updated title
-    subtitle: 'Best Overall Mushroom Coffee',
+    subtitle: 'Best Overall Mushroom Coffee',  // Updated subtitle
     image: '/images/foursigmatic-original.jpg',
     description: `Four Sigmatic’s Original Mushroom Coffee is a potent, mushroom-forward blend that supports energy, focus, immunity, and digestion with 1500mg of functional mushrooms. While it contains a small amount of instant coffee to balance flavor, the real magic is in its high dose of Lion’s Mane, Chaga, Turkey Tail, and Reishi — plus prebiotics and probiotics.`,
     pros: [
@@ -42,7 +43,7 @@ const products = [
   },
   {
     title: 'RYZE Mushroom Coffee',  // Updated title
-    subtitle: 'Most Popular Mushroom Coffee',
+    subtitle: 'Most Popular Mushroom Coffee',  // Updated subtitle
     image: '/images/ryze.jpg',
     description: `RYZE is a full-spectrum instant mushroom coffee with 2000mg of functional fungi: Cordyceps, Lion’s Mane, Turkey Tail, Shiitake, King Trumpet, and Reishi. It’s strong on earthy flavor and includes MCT oil for brain fuel. USDA Organic and grown in California.`,
     pros: [
@@ -92,81 +93,74 @@ export default function BestMushroomCoffees() {
       </Head>
 
       <main className="bg-white text-gray-900 font-sans">
-        {/* Header */}
-        <header className="flex justify-between items-center border-b px-4 py-3 md:px-12 bg-gray-100 shadow-sm sticky top-0 z-10">
-          <div className="flex items-center space-x-3">
-            <Link href="/">
-              <img src="/images/logo.jpg" alt="BestOnAmz Logo" className="w-16 h-16 rounded-full cursor-pointer" />
-            </Link>
-            <Link href="/">
-              <h1 className="text-2xl font-bold cursor-pointer">BestOnAmz</h1>
-            </Link>
-          </div>
-          <nav className="flex gap-6 text-sm font-medium mt-2 sm:mt-0">
-            <Link href="/">Home</Link>
-            <Link href="/best-pimple-patches">Pimple Patches</Link>
-            <Link href="/best-mushroom-coffees">Mushroom Coffee</Link>
-          </nav>
-        </header>
+        {/* Navbar */}
+        <Navbar />
 
         {/* Main Section */}
         <section className="px-4 md:px-12 py-10 max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4 text-center">Top Mushroom Coffee Brands (Updated 2025)</h2>
-          <p className="text-gray-700 mb-8 max-w-2xl mx-auto text-center">
-            Looking to boost mental clarity, immune health, and creativity? We reviewed the top mushroom coffee brands on Amazon to help you find the best-tasting and most effective blends.
-          </p>
+          {/* Hidden SEO Title and Description */}
+          <div className="sr-only">
+            <h2 className="text-3xl font-bold mb-4 text-center">Top Mushroom Coffee Brands (Updated 2025)</h2>
+            <p className="text-gray-700 mb-8 max-w-2xl mx-auto text-center">
+              Looking to boost mental clarity, immune health, and creativity? We reviewed the top mushroom coffee brands on Amazon to help you find the best-tasting and most effective blends.
+            </p>
+          </div>
 
-          {/* Product Cards Display */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {products.map((p) => (
-              <Link href={`https://${amazonDomain}/dp/${p.asin}/ref=nosim?tag=${p.tag}`} key={p.asin} passHref>
-                <div className={`p-6 bg-white border shadow-lg rounded-lg transition-all duration-300 transform hover:scale-105 ${p.topPick ? 'border-4 border-yellow-500' : ''}`}>
-                  {p.topPick && (
-                    <div className="bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded inline-block mb-2">
-                      Top Pick
-                    </div>
-                  )}
-                  <div className="flex justify-center mb-4">
-                    <img src={p.image} alt={p.title} className="rounded h-64 w-auto object-contain" />
+              <div key={p.asin} className={`p-6 bg-white border shadow-lg rounded-lg transition-all duration-300 transform hover:scale-105 ${p.topPick ? 'border-4 border-yellow-500' : ''} ${p.bestValue ? 'border-4 border-green-500' : ''}`}>
+                {p.topPick && (
+                  <div className="bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded inline-block mb-2">
+                    Top Pick
                   </div>
-                  <h3 className="text-2xl font-semibold mb-2 text-center">{p.title}</h3>
-                  <h4 className="text-lg font-medium mb-4 text-center text-gray-600">{p.subtitle}</h4>
-                  <hr className="mb-4 border-gray-300" />
-                  <p className="text-md text-gray-700 mb-4">{p.description}</p>
+                )}
+                {p.bestValue && (
+                  <div className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded inline-block mb-2">
+                    Best Value
+                  </div>
+                )}
+                <div className="flex justify-center mb-4">
+                  <img src={p.image} alt={p.title} className="rounded h-64 w-auto object-contain" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-2 text-center">{p.title}</h3>
+                <h4 className="text-lg font-medium mb-4 text-center text-gray-600">{p.subtitle}</h4>
 
-                  {/* Pros and Cons in rows with borders */}
-                  <div className="grid grid-cols-1 gap-4 mb-4 border-t pt-4">
-                    <div>
-                      <strong className="text-green-700 block">Pros:</strong>
-                      <ul className="list-disc list-inside text-sm text-green-800">
-                        {p.pros.map((item, i) => <li key={i}>{item}</li>)}
-                      </ul>
-                    </div>
+                {/* Button moved up */}
+                <div className="flex justify-center mb-4">
+                  <a
+                    href={`https://${amazonDomain}/dp/${p.asin}/ref=nosim?tag=${p.tag}`}
+                    className="inline-block bg-gray-800 text-white px-6 py-3 text-sm rounded-full shadow-lg hover:bg-gray-900 transition-all duration-300 transform hover:scale-105"
+                    target="_blank" rel="nofollow sponsored"
+                  >
+                    Check Price on Amazon
+                  </a>
+                </div>
 
-                    <div>
-                      <strong className="text-red-700 block">Cons:</strong>
-                      <ul className="list-disc list-inside text-sm text-red-800">
-                        {p.cons.map((item, i) => <li key={i}>{item}</li>)}
-                      </ul>
-                    </div>
+                <hr className="mb-4 border-gray-300" />
+                <p className="text-md text-gray-700 mb-4">{p.description}</p>
+
+                {/* Pros and Cons in rows with borders */}
+                <div className="grid grid-cols-1 gap-4 mb-4 border-t pt-4">
+                  <div>
+                    <strong className="text-green-700 block">Pros:</strong>
+                    <ul className="list-disc list-inside text-sm text-green-800">
+                      {p.pros.map((item, i) => <li key={i}>{item}</li>)}
+                    </ul>
                   </div>
 
-                  {/* CTA Button */}
-                  <div className="flex justify-center mt-4">
-                    <a
-                      href={`https://${amazonDomain}/dp/${p.asin}/ref=nosim?tag=${p.tag}`}
-                      className="inline-block bg-gray-800 text-white px-6 py-3 text-sm rounded-full shadow-lg hover:bg-gray-900 transition-all duration-300 transform hover:scale-105"
-                      target="_blank" rel="nofollow sponsored"
-                    >
-                      Check Price on Amazon
-                    </a>
+                  <div>
+                    <strong className="text-red-700 block">Cons:</strong>
+                    <ul className="list-disc list-inside text-sm text-red-800">
+                      {p.cons.map((item, i) => <li key={i}>{item}</li>)}
+                    </ul>
                   </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </section>
 
+        {/* Footer */}
         <footer className="bg-gray-100 border-t mt-10 py-8 text-center text-sm text-gray-600">
           <div className="mb-2">© {new Date().getFullYear()} BestOnAmz.com – All rights reserved.</div>
           <div>As an Amazon Associate, we earn from qualifying purchases.</div>
