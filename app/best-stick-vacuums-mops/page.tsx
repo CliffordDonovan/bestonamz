@@ -6,21 +6,13 @@ import { productData } from './productData';  // Import product data for this sp
 import { pageContent } from './pageContent';  // Import page content for this specific page
 
 export default function CategoryPage() {
-  const [amazonDomain, setAmazonDomain] = useState('amazon.com');
   const [isLoading, setIsLoading] = useState(true);
 
-  // Detect region for Amazon
+  // Simulate loading (if needed for locale detection)
   useEffect(() => {
     const determineAmazonDomain = () => {
-      try {
-        const region = navigator.language.includes('en-CA') ? 'ca' : 'com';
-        setAmazonDomain(`amazon.${region}`);
-      } catch (error) {
-        console.error('Error determining region:', error);
-        setAmazonDomain('amazon.com'); // fallback
-      } finally {
-        setIsLoading(false);
-      }
+      // Simulate delay for UX purposes (if you decide to handle locale here later)
+      setIsLoading(false);
     };
 
     determineAmazonDomain();
@@ -34,6 +26,10 @@ export default function CategoryPage() {
     );
   }
 
-  // Return the layout with productData and pageContent
-  return <ProductPageLayout productData={productData} pageContent={pageContent} amazonDomain={amazonDomain} />;
+  return (
+    <ProductPageLayout
+      productData={productData}
+      pageContent={pageContent}
+    />
+  );
 }
