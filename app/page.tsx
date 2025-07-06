@@ -2,7 +2,7 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
-import Navbar from '../components/Navbar'; // Import the navbar component
+import Navbar from '../components/Navbar';
 
 export default function Home() {
   return (
@@ -38,7 +38,6 @@ export default function Home() {
         <section className="py-12 px-4 md:px-12 bg-gray-50">
           <h2 className="text-3xl font-semibold text-center mb-8">Top Categories</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {/* Pimple Patches Category */}
             <Link href="/best-pimple-patches" className="bg-white rounded-lg border shadow-md hover:shadow-xl transition">
               <img
                 src="/images/category-acne.jpg"
@@ -53,7 +52,6 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Mushroom Coffee Category */}
             <Link href="/best-mushroom-coffees" className="bg-white rounded-lg border shadow-md hover:shadow-xl transition">
               <img
                 src="/images/category-mushroom-coffee.jpg"
@@ -68,10 +66,9 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Robot Vacuums Category */}
             <Link href="/best-robot-vacuums" className="bg-white rounded-lg border shadow-md hover:shadow-xl transition">
               <img
-                src="/images/Narwal-Freo-X.jpg" // Correct product image for robot vacuums category
+                src="/images/Narwal-Freo-X.jpg"
                 alt="Robot Vacuums"
                 className="w-full h-48 object-cover rounded-t-lg"
               />
@@ -99,47 +96,82 @@ export default function Home() {
         <section className="py-12 px-4 md:px-12 bg-gray-50">
           <h2 className="text-3xl font-semibold text-center mb-8">Our Featured Picks</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {/* Example Featured Product 1 */}
-            <Link href="/best-pimple-patches" passHref>
-              <div className="p-6 bg-white border shadow-lg rounded-lg hover:scale-105 transition-all duration-300 transform">
-                <img src="/images/grace-stella-patches.jpg" alt="Grace & Stella Pimple Patches" className="w-full h-48 object-cover rounded-t-lg" />
-                <h3 className="text-lg font-semibold text-center mt-4">Grace & Stella Pimple Patches</h3>
-                <p className="text-center text-gray-600 mb-4">Best Hydrocolloid Acne Treatment for Blemishes</p>
-                <div className="flex justify-center mt-4">
-                  <a href="https://amazon.com/dp/B0CPJMSNL1" className="inline-block bg-blue-600 text-white px-6 py-3 text-sm rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
-                    Check Price on Amazon
-                  </a>
-                </div>
-              </div>
-            </Link>
 
-            {/* Example Featured Product 2 */}
-            <Link href="/best-mushroom-coffees" passHref>
-              <div className="p-6 bg-white border shadow-lg rounded-lg hover:scale-105 transition-all duration-300 transform">
-                <img src="/images/foursigmatic-original.jpg" alt="Four Sigmatic Mushroom Coffee" className="w-full h-48 object-cover rounded-t-lg" />
-                <h3 className="text-lg font-semibold text-center mt-4">Four Sigmatic Mushroom Coffee</h3>
-                <p className="text-center text-gray-600 mb-4">Best Overall Mushroom Coffee</p>
-                <div className="flex justify-center mt-4">
-                  <a href="https://amazon.com/dp/B0CGG395RP" className="inline-block bg-blue-600 text-white px-6 py-3 text-sm rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
-                    Check Price on Amazon
-                  </a>
+            {/* Product 1 */}
+            <div className="p-6 bg-white border shadow-lg rounded-lg hover:scale-105 transition-all duration-300 transform">
+              <Link href="/best-pimple-patches">
+                <div className="cursor-pointer">
+                  <img
+                    src="/images/grace-stella-patches.jpg"
+                    alt="Grace & Stella Pimple Patches"
+                    className="w-full h-48 object-cover rounded-t-lg"
+                  />
+                  <h3 className="text-lg font-semibold text-center mt-4">Grace & Stella Pimple Patches</h3>
+                  <p className="text-center text-gray-600 mb-4">Best Hydrocolloid Acne Treatment for Blemishes</p>
                 </div>
+              </Link>
+              <div className="flex justify-center mt-4">
+                <a
+                  href="https://amazon.com/dp/B0CPJMSNL1"
+                  target="_blank"
+                  rel="nofollow sponsored"
+                  className="inline-block bg-blue-600 text-white px-6 py-3 text-sm rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
+                >
+                  Check Price on Amazon
+                </a>
               </div>
-            </Link>
+            </div>
 
-            {/* Example Featured Product 3 */}
-            <Link href="/best-robot-vacuums" passHref>
-              <div className="p-6 bg-white border shadow-lg rounded-lg hover:scale-105 transition-all duration-300 transform">
-                <img src="/images/Narwal-Freo-X.jpg" alt="Narwal Freo X Robot Vacuum" className="w-full h-48 object-cover rounded-t-lg" />
-                <h3 className="text-lg font-semibold text-center mt-4">Narwal Freo X Robot Vacuum</h3>
-                <p className="text-center text-gray-600 mb-4">Effortless Cleaning for Your Home</p>
-                <div className="flex justify-center mt-4">
-                  <a href="https://amazon.com/dp/B0DHCJ571Z" className="inline-block bg-blue-600 text-white px-6 py-3 text-sm rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
-                    Check Price on Amazon
-                  </a>
+            {/* Product 2 */}
+            <div className="p-6 bg-white border shadow-lg rounded-lg hover:scale-105 transition-all duration-300 transform">
+              <Link href="/best-mushroom-coffees">
+                <div className="cursor-pointer">
+                  <img
+                    src="/images/foursigmatic-original.jpg"
+                    alt="Four Sigmatic Mushroom Coffee"
+                    className="w-full h-48 object-cover rounded-t-lg"
+                  />
+                  <h3 className="text-lg font-semibold text-center mt-4">Four Sigmatic Mushroom Coffee</h3>
+                  <p className="text-center text-gray-600 mb-4">Best Overall Mushroom Coffee</p>
                 </div>
+              </Link>
+              <div className="flex justify-center mt-4">
+                <a
+                  href="https://amazon.com/dp/B0CGG395RP"
+                  target="_blank"
+                  rel="nofollow sponsored"
+                  className="inline-block bg-blue-600 text-white px-6 py-3 text-sm rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
+                >
+                  Check Price on Amazon
+                </a>
               </div>
-            </Link>
+            </div>
+
+            {/* Product 3 */}
+            <div className="p-6 bg-white border shadow-lg rounded-lg hover:scale-105 transition-all duration-300 transform">
+              <Link href="/best-robot-vacuums">
+                <div className="cursor-pointer">
+                  <img
+                    src="/images/Narwal-Freo-X.jpg"
+                    alt="Narwal Freo X Robot Vacuum"
+                    className="w-full h-48 object-cover rounded-t-lg"
+                  />
+                  <h3 className="text-lg font-semibold text-center mt-4">Narwal Freo X Robot Vacuum</h3>
+                  <p className="text-center text-gray-600 mb-4">Effortless Cleaning for Your Home</p>
+                </div>
+              </Link>
+              <div className="flex justify-center mt-4">
+                <a
+                  href="https://amazon.com/dp/B0DHCJ571Z"
+                  target="_blank"
+                  rel="nofollow sponsored"
+                  className="inline-block bg-blue-600 text-white px-6 py-3 text-sm rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
+                >
+                  Check Price on Amazon
+                </a>
+              </div>
+            </div>
+
           </div>
         </section>
 

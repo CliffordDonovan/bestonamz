@@ -146,7 +146,13 @@ const products = [
 ];
 
 // Product Card Component
-const ProductCard = ({ product, amazonDomain }) => {
+const ProductCard = ({
+  product,
+  amazonDomain
+}: {
+  product: any;
+  amazonDomain: string;
+}) => {
   return (
     <article className={`p-6 bg-white border shadow-lg rounded-lg transition-all duration-300 transform hover:scale-105 ${product.topPick ? 'border-4 border-yellow-500' : ''} ${product.bestValue ? 'border-4 border-green-500' : ''}`}>
       {product.topPick && (
@@ -159,49 +165,47 @@ const ProductCard = ({ product, amazonDomain }) => {
           Best Value
         </div>
       )}
-      
       <div className="flex justify-center mb-4">
-        <Image 
-          src={product.image} 
-          alt={product.altText} 
-          width={256}  // Keep fixed width
-          height={256}  // Keep fixed height
-          className="rounded w-auto h-64 object-contain"  // Ensures scaling and maintains aspect ratio
+        <Image
+          src={product.image}
+          alt={product.altText}
+          width={256}
+          height={256}
+          className="rounded w-auto h-64 object-contain"
           priority={product.topPick || product.bestValue}
         />
       </div>
-      
       <h3 className="text-2xl font-semibold mb-2 text-center">{product.title}</h3>
       <h4 className="text-lg font-medium mb-2 text-center text-gray-600">{product.subtitle}</h4>
       <p className="text-center text-gray-800 font-medium mb-4">{product.priceRange}</p>
-
       <div className="flex justify-center mb-4">
         <a
           href={`https://${amazonDomain}/dp/${product.asin}/ref=nosim?tag=${product.tag}`}
           className="inline-block bg-gray-800 text-white px-6 py-3 text-sm rounded-full shadow-lg hover:bg-gray-900 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2"
-          target="_blank" 
+          target="_blank"
           rel="nofollow sponsored"
           aria-label={`Check price for ${product.title} on Amazon`}
         >
           Check Price on Amazon
         </a>
       </div>
-
       <hr className="mb-4 border-gray-300" />
       <p className="text-md text-gray-700 mb-4">{product.description}</p>
-
       <div className="grid grid-cols-1 gap-4 mb-4 border-t pt-4">
         <div>
           <strong className="text-green-700 block mb-2">Pros:</strong>
           <ul className="list-disc list-inside text-sm text-green-800 space-y-1">
-            {product.pros.map((item, i) => <li key={i}>{item}</li>)}
+            {product.pros.map((item: string, i: number) => (
+              <li key={i}>{item}</li>
+            ))}
           </ul>
         </div>
-
         <div>
           <strong className="text-red-700 block mb-2">Cons:</strong>
           <ul className="list-disc list-inside text-sm text-red-800 space-y-1">
-            {product.cons.map((item, i) => <li key={i}>{item}</li>)}
+            {product.cons.map((item: string, i: number) => (
+              <li key={i}>{item}</li>
+            ))}
           </ul>
         </div>
       </div>
@@ -251,7 +255,7 @@ export default function BestCoffeeGrinders() {
         <Navbar />
 
         <section className="px-4 md:px-12 py-10 max-w-7xl mx-auto">
-          {/* SEO Content (Hidden on mobile) */}
+          {/* SEO Content */}
           <div className="hidden md:block">
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">6 Best Coffee Grinders - 2025</h1>
@@ -271,93 +275,6 @@ export default function BestCoffeeGrinders() {
               <ProductCard key={product.asin} product={product} amazonDomain={amazonDomain} />
             ))}
           </div>
-
-          {/* Buying Guide Section */}
-          <section className="mt-16 prose prose-lg max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Buying Guide for Best Coffee Grinders</h2>
-            <div className="bg-gray-50 p-6 rounded-lg mb-8">
-              <p className="text-gray-800 mb-4">
-                Coffee grinders come in two main types: blade grinders (which chop beans unevenly) and burr grinders (which crush beans uniformly). For consistently great coffee, you'll want a burr grinder. These come in manual and electric varieties, with different price points and features to suit every coffee lover's needs.
-              </p>
-              <p className="text-gray-800">
-                Whether you're brewing pour-over coffee, espresso, or French press, the grind consistency and particle size will dramatically impact your cup's flavor.
-              </p>
-            </div>
-
-            <h3 className="text-2xl font-bold mb-4">Key Considerations</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-white p-6 border rounded-lg">
-                <h4 className="font-bold text-lg mb-2">Brewing Methods</h4>
-                <p className="text-gray-700 text-sm">
-                  Different brewing methods require different grind sizes. Espresso needs fine, consistent grounds, while French press requires a coarse grind. Pour-over methods need medium-fine grounds.
-                </p>
-              </div>
-              
-              <div className="bg-white p-6 border rounded-lg">
-                <h4 className="font-bold text-lg mb-2">Daily Usage</h4>
-                <p className="text-gray-700 text-sm">
-                  If you're grinding for multiple cups daily, look for grinders with larger hoppers and faster grinding speeds. Single-cup drinkers can get by with smaller models.
-                </p>
-              </div>
-              
-              <div className="bg-white p-6 border rounded-lg">
-                <h4 className="font-bold text-lg mb-2">Electric vs. Manual</h4>
-                <p className="text-gray-700 text-sm">
-                  Electric grinders are faster and more convenient but tend to be noisier and more expensive. Manual grinders are quieter, more portable, and often provide better grind quality at lower price points.
-                </p>
-              </div>
-              
-              <div className="bg-white p-6 border rounded-lg">
-                <h4 className="font-bold text-lg mb-2">Budget</h4>
-                <p className="text-gray-700 text-sm">
-                  Entry-level burr grinders start around $80, while premium models can exceed $300. Even budget burr grinders will dramatically outperform blade grinders or pre-ground coffee.
-                </p>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-bold mb-4">Coffee Grinder Prices</h3>
-            <div className="bg-green-50 p-6 rounded-lg mb-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                <div>
-                  <h4 className="font-bold text-lg mb-2">Entry-Level</h4>
-                  <p className="text-2xl font-bold text-green-600 mb-2">$80-150</p>
-                  <p className="text-sm text-gray-700">OXO Brew, Baratza Encore</p>
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg mb-2">Mid-Range</h4>
-                  <p className="text-2xl font-bold text-blue-600 mb-2">$150-250</p>
-                  <p className="text-sm text-gray-700">Breville Smart Grinder Pro</p>
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg mb-2">Premium</h4>
-                  <p className="text-2xl font-bold text-purple-600 mb-2">$250-400+</p>
-                  <p className="text-sm text-gray-700">Fellow Ode Gen 2</p>
-                </div>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-bold mb-4">Expert Tips</h3>
-            <div className="bg-yellow-50 p-6 rounded-lg mb-8">
-              <ul className="space-y-3 text-gray-800">
-                <li className="flex items-start">
-                  <span className="text-yellow-600 mr-2">✓</span>
-                  <span><strong>Grind fresh:</strong> Coffee begins losing flavor within 15 minutes of grinding, so always grind just before brewing.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-yellow-600 mr-2">✓</span>
-                  <span><strong>Clean regularly:</strong> Clean your grinder every few weeks with grinder cleaning tablets or uncooked rice to remove coffee oils.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-yellow-600 mr-2">✓</span>
-                  <span><strong>Invest wisely:</strong> A $200 grinder with a $50 coffee maker will produce better coffee than a $200 coffee maker with a $50 grinder.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-yellow-600 mr-2">✓</span>
-                  <span><strong>Match your method:</strong> Espresso needs fine grounds, pour-over needs medium-fine, and French press needs coarse.</span>
-                </li>
-              </ul>
-            </div>
-          </section>
         </section>
 
         <footer className="bg-gray-100 border-t mt-16 py-8 text-center text-sm text-gray-600">
