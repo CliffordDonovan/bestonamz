@@ -27,7 +27,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Desktop Nav (Centered Options) */}
+        {/* Desktop Nav */}
         <div className="hidden md:flex justify-center flex-grow gap-6 text-sm font-medium">
           <Link href="/" passHref>
             <span className="text-white hover:text-yellow-500 transition duration-200 cursor-pointer">Home</span>
@@ -46,6 +46,9 @@ const Navbar = () => {
           </Link>
           <Link href="/best-robot-vacuums" passHref>
             <span className="text-white hover:text-yellow-500 transition duration-200 cursor-pointer">Robot Vacuums</span>
+          </Link>
+          <Link href="/best-tvs" passHref>
+            <span className="text-white hover:text-yellow-500 transition duration-200 cursor-pointer">Best TVs</span>
           </Link>
         </div>
 
@@ -78,6 +81,9 @@ const Navbar = () => {
         </Link>
         <Link href="/best-robot-vacuums" passHref>
           <span className="block text-white hover:text-yellow-500 py-2">Robot Vacuums</span>
+        </Link>
+        <Link href="/best-tvs" passHref>
+          <span className="block text-white hover:text-yellow-500 py-2">Best TVs</span>
         </Link>
       </div>
     </nav>
