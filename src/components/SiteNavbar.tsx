@@ -75,23 +75,25 @@ const SiteNavbar = () => {
               </Button>
               
               {showCategories && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-background/95 backdrop-blur-md border rounded-lg shadow-elegant animate-fade-in">
-                  <div className="p-4">
-                    <h3 className="font-semibold text-sm text-muted-foreground mb-3 flex items-center gap-2">
+                <div className="absolute top-full left-0 pt-2">
+                  <div className="w-80 bg-popover border rounded-lg shadow-lg animate-fade-in z-[100] overflow-hidden">
+                    <div className="p-6">
+                    <h3 className="font-semibold text-sm text-muted-foreground mb-4 flex items-center gap-2">
                       <Star className="w-4 h-4" />
                       Popular Categories
                     </h3>
-                    <div className="grid grid-cols-1 gap-1">
+                    <div className="grid grid-cols-1 gap-2">
                       {categories.map((category) => (
                         <Link
                           key={category.href}
                           to={category.href}
                           className={cn(
-                            "flex items-center justify-between p-3 rounded-md hover:bg-muted/50 transition-colors group",
-                            location.pathname === category.href && "bg-muted"
+                            "flex items-center justify-between p-3 rounded-md hover:bg-accent transition-colors group",
+                            location.pathname === category.href && "bg-accent"
                           )}
+                          onClick={() => setShowCategories(false)}
                         >
-                          <span className="text-sm font-medium group-hover:text-primary transition-colors">
+                          <span className="text-sm font-medium group-hover:text-accent-foreground transition-colors">
                             {category.name}
                           </span>
                           {category.popular && (
@@ -102,6 +104,7 @@ const SiteNavbar = () => {
                         </Link>
                       ))}
                     </div>
+                  </div>
                   </div>
                 </div>
               )}
@@ -121,13 +124,14 @@ const SiteNavbar = () => {
             </div>
           </div>
 
-          {/* Search & CTA */}
+          {/* CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="icon" className="hover:bg-muted/50">
-              <Search className="w-5 h-5" />
-            </Button>
-            <Button variant="cta" size="sm" asChild>
-              <Link to="/best-coffee-grinders">Start Shopping</Link>
+            <Button 
+              variant="cta" 
+              size="sm" 
+              onClick={() => window.open('https://amazon.com?tag=bestonamz0e-20', '_blank', 'noopener,noreferrer')}
+            >
+              Start Shopping
             </Button>
           </div>
 
@@ -147,7 +151,7 @@ const SiteNavbar = () => {
           <div className="lg:hidden border-t bg-background/95 backdrop-blur-md animate-fade-in">
             <div className="px-4 py-6 space-y-4">
               <div className="flex items-center gap-2 mb-4">
-                <Search className="w-5 h-5 text-muted-foreground" />
+                <Star className="w-5 h-5 text-muted-foreground" />
                 <span className="text-sm text-muted-foreground">Popular Categories</span>
               </div>
               {categories.map((category) => (
@@ -169,8 +173,15 @@ const SiteNavbar = () => {
                 </Link>
               ))}
               <div className="pt-4 border-t">
-                <Button variant="cta" className="w-full" asChild>
-                  <Link to="/best-coffee-grinders">Start Shopping</Link>
+                <Button 
+                  variant="cta" 
+                  className="w-full" 
+                  onClick={() => {
+                    setIsOpen(false);
+                    window.open('https://amazon.com?tag=bestonamz0e-20', '_blank', 'noopener,noreferrer');
+                  }}
+                >
+                  Start Shopping
                 </Button>
               </div>
             </div>

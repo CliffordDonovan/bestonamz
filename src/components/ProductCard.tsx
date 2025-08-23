@@ -101,7 +101,7 @@ export const ProductCard = ({
           rank > 2 && "hover:border-primary/40"
         )}>
           <CardHeader className="p-0">
-            <div className="relative aspect-square w-full bg-muted overflow-hidden">
+            <div className="relative aspect-[4/3] w-full bg-muted overflow-hidden">
               <img
                 src={image}
                 alt={`${name} product image - Amazon affiliate link`}
@@ -138,12 +138,12 @@ export const ProductCard = ({
             </div>
           </CardHeader>
 
-          <CardContent className="p-6">
+          <CardContent className="p-4">
             {/* Product title and tagline */}
-            <CardTitle className="text-xl font-semibold mb-1 group-hover:text-primary transition-colors">
+            <CardTitle className="text-lg font-semibold mb-1 group-hover:text-primary transition-colors leading-tight">
               {name}
             </CardTitle>
-            {tagline && <p className="text-sm text-muted-foreground mb-3">{tagline}</p>}
+            {tagline && <p className="text-xs text-muted-foreground mb-3 line-clamp-2">{tagline}</p>}
 
             {/* Rating and social proof */}
             {typeof rating === "number" && (
@@ -189,17 +189,17 @@ export const ProductCard = ({
             )}
 
 
-            {/* Pros and cons */}
+            {/* Pros and cons - compact layout */}
             {(pros.length > 0 || cons.length > 0) && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <div className="space-y-3 mb-4">
                 {pros.length > 0 && (
                   <div>
-                    <h4 className="text-sm font-medium mb-2 text-success">✓ Pros</h4>
-                    <ul className="space-y-1 text-sm">
-                      {pros.slice(0, 3).map((p, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="text-success mt-0.5">•</span>
-                          <span>{p}</span>
+                    <h4 className="text-xs font-medium mb-1 text-success">✓ Key Benefits</h4>
+                    <ul className="space-y-0.5 text-xs">
+                      {pros.slice(0, 2).map((p, i) => (
+                        <li key={i} className="flex items-start gap-1">
+                          <span className="text-success mt-0.5 text-xs">•</span>
+                          <span className="line-clamp-1">{p}</span>
                         </li>
                       ))}
                     </ul>
@@ -207,12 +207,12 @@ export const ProductCard = ({
                 )}
                 {cons.length > 0 && (
                   <div>
-                    <h4 className="text-sm font-medium mb-2 text-muted-foreground">⚠ Considerations</h4>
-                    <ul className="space-y-1 text-sm">
-                      {cons.slice(0, 3).map((c, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="text-muted-foreground mt-0.5">•</span>
-                          <span className="text-muted-foreground">{c}</span>
+                    <h4 className="text-xs font-medium mb-1 text-muted-foreground">⚠ Consider</h4>
+                    <ul className="space-y-0.5 text-xs">
+                      {cons.slice(0, 1).map((c, i) => (
+                        <li key={i} className="flex items-start gap-1">
+                          <span className="text-muted-foreground mt-0.5 text-xs">•</span>
+                          <span className="text-muted-foreground line-clamp-1">{c}</span>
                         </li>
                       ))}
                     </ul>

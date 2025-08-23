@@ -130,39 +130,9 @@ export default function ProductPageLayout({
       />
       <SiteNavbar />
 
-      {/* Breadcrumbs for SEO navigation hierarchy */}
-      <div className="container mx-auto px-6 pt-4">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">Home</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/categories">Categories</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>{breadcrumbCategory}</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
 
-      <main className="container mx-auto px-6 py-2 md:py-4 grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8">
-        <aside className="hidden lg:block lg:col-span-3">
-          <nav className="sticky top-24 rounded-md border bg-card p-4 text-sm">
-            <p className="mb-2 font-medium">On this page</p>
-            <ul className="space-y-2">
-              <li><a href="#top-picks" className="story-link">Top Picks</a></li>
-              <li><a href="#comparison" className="story-link">Comparison</a></li>
-              <li><a href="#guide" className="story-link">Buying Guide</a></li>
-              <li><a href="#faqs" className="story-link">FAQs</a></li>
-            </ul>
-          </nav>
-        </aside>
-
-        <section className="lg:col-span-9 space-y-6 md:space-y-10">
+      <main className="container mx-auto px-6 py-2 md:py-4">
+        <section className="space-y-6 md:space-y-10">
           <div className="space-y-3 md:space-y-4">
             <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-1 md:mb-2">
               <Badge variant="secondary" className="bg-gradient-green text-on text-xs">
@@ -219,7 +189,7 @@ export default function ProductPageLayout({
           </div>
 
           <section id="top-picks" className="space-y-6">
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {products.map((p) => (
                 <div id={`product-${p.rank}`} key={p.rank}>
                   <ProductCard {...p} />
