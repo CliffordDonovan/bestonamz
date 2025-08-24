@@ -77,20 +77,19 @@ export const ProductCard = ({
     <>
       <article
         id={`product-card-${rank}`}
-        className="group hover-scale rounded-lg"
+        className="group hover-scale rounded-lg cursor-pointer"
+        onClick={(e) => {
+          // Only trigger if clicking the card itself, not a button
+          if ((e.target as HTMLElement).closest('button, a')) return;
+          window.open(amazonUrl, '_blank');
+        }}
       >
-        <a 
-          href={amazonUrl}
-          target="_blank"
-          rel="nofollow sponsored noopener noreferrer"
-          className="block"
-        >
-          <Card className={cn(
-            "overflow-hidden transition-all hover:shadow-glow hover-lift cursor-pointer",
-            rank === 1 && "ring-2 ring-yellow-400/60 border-yellow-400/40",
-            rank === 2 && "ring-2 ring-primary/50 border-primary/40", 
-            rank > 2 && "hover:border-primary/40"
-          )}>
+        <Card className={cn(
+          "overflow-hidden transition-all hover:shadow-glow hover-lift",
+          rank === 1 && "ring-2 ring-yellow-400/60 border-yellow-400/40",
+          rank === 2 && "ring-2 ring-primary/50 border-primary/40", 
+          rank > 2 && "hover:border-primary/40"
+        )}>
           <CardHeader className="p-0">
             <div className="relative aspect-[4/3] w-full bg-muted overflow-hidden">
               <img
@@ -213,7 +212,7 @@ export const ProductCard = ({
             )}
 
             {/* Action button */}
-            <div className="w-full pointer-events-none">
+            <div className="w-full">
               <PrimaryCta 
                 amazonUrl={amazonUrl}
                 productName={name}
@@ -224,7 +223,6 @@ export const ProductCard = ({
             </div>
           </CardContent>
         </Card>
-        </a>
       </article>
 
       {/* Sticky mobile CTA */}
