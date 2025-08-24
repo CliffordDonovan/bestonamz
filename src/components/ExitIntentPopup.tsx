@@ -105,16 +105,9 @@ export const ExitIntentPopup = ({ onRedirect, productName, amazonUrl, productIma
             onClick={handleRedirect}
             className="w-full bg-[#FF9900] hover:bg-[#FF9900]/90 text-white font-semibold justify-center"
             size="lg"
-            asChild
           >
-            <a 
-              href={amazonUrl} 
-              target="_blank" 
-              rel="nofollow sponsored noopener noreferrer"
-            >
-              Check Amazon Now
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
+            Check Amazon Now
+            <ExternalLink className="w-4 h-4 ml-2" />
           </Button>
           <Button
             onClick={handleStay}

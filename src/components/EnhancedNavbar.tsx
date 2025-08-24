@@ -126,8 +126,12 @@ const EnhancedNavbar = () => {
             <Button variant="ghost" size="icon" className="hover:bg-muted/50">
               <Search className="w-5 h-5" />
             </Button>
-            <Button variant="cta" size="sm" asChild>
-              <Link to="/best-coffee-grinders">Start Shopping</Link>
+            <Button 
+              variant="cta" 
+              size="sm"
+              onClick={() => window.open("https://amazon.com?tag=bestonamz0e-20", "_blank", "nofollow,sponsored,noopener,noreferrer")}
+            >
+              Start Shopping
             </Button>
           </div>
 
@@ -169,8 +173,15 @@ const EnhancedNavbar = () => {
                 </Link>
               ))}
               <div className="pt-4 border-t">
-                <Button variant="cta" className="w-full" asChild>
-                  <Link to="/best-coffee-grinders">Start Shopping</Link>
+                <Button 
+                  variant="cta" 
+                  className="w-full"
+                  onClick={() => {
+                    setIsOpen(false);
+                    window.open("https://amazon.com?tag=bestonamz0e-20", "_blank", "nofollow,sponsored,noopener,noreferrer");
+                  }}
+                >
+                  Start Shopping
                 </Button>
               </div>
             </div>

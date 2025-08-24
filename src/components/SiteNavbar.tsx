@@ -129,15 +129,9 @@ const SiteNavbar = () => {
             <Button 
               variant="cta" 
               size="sm"
-              asChild
+              onClick={() => window.open("https://amazon.com?tag=bestonamz0e-20", "_blank", "nofollow,sponsored,noopener,noreferrer")}
             >
-              <a 
-                href="https://amazon.com?tag=bestonamz0e-20" 
-                target="_blank" 
-                rel="nofollow sponsored noopener noreferrer"
-              >
-                Start Shopping
-              </a>
+              Start Shopping
             </Button>
           </div>
 
@@ -182,16 +176,12 @@ const SiteNavbar = () => {
                 <Button 
                   variant="cta" 
                   className="w-full"
-                  onClick={() => setIsOpen(false)}
-                  asChild
+                  onClick={() => {
+                    setIsOpen(false);
+                    window.open("https://amazon.com?tag=bestonamz0e-20", "_blank", "nofollow,sponsored,noopener,noreferrer");
+                  }}
                 >
-                  <a 
-                    href="https://amazon.com?tag=bestonamz0e-20" 
-                    target="_blank" 
-                    rel="nofollow sponsored noopener noreferrer"
-                  >
-                    Start Shopping
-                  </a>
+                  Start Shopping
                 </Button>
               </div>
             </div>
