@@ -6,6 +6,7 @@ import { ConversionBadge, SocialProof, PriceComparison } from "@/components/conv
 import { DeliveryInfo, StockInfo } from "@/components/conversion/DeliveryInfo";
 import { PrimaryCta, StickyCta } from "@/components/conversion/CTAButtons";
 import { useState, useEffect } from "react";
+import amazonLogo from "@/assets/amazon-logo.svg";
 
 export interface ProductCardProps {
   rank: number;
@@ -180,7 +181,7 @@ export const ProductCard = ({
                 <div className="flex items-center gap-2">
                   <span className="text-sm text-muted-foreground">available at</span>
                   <img 
-                    src="/src/assets/amazon-logo.svg" 
+                    src={amazonLogo} 
                     alt="Amazon" 
                     className="h-5 w-auto object-contain"
                   />

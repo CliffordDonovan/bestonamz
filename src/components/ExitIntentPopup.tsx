@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Clock, ExternalLink } from 'lucide-react';
-import amazonLogo from '@/assets/amazon-logo.svg';
 
 interface ExitIntentPopupProps {
   onRedirect: (url: string) => void;
