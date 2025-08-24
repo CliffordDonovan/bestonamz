@@ -60,6 +60,7 @@ export const ExitIntentPopup = ({ onRedirect, productName, amazonUrl, productIma
 
   const handleRedirect = () => {
     if (amazonUrl) {
+      window.open(amazonUrl, '_blank', 'nofollow,sponsored,noopener,noreferrer');
       onRedirect(amazonUrl);
     }
     setIsOpen(false);

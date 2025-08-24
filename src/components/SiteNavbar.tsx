@@ -129,7 +129,7 @@ const SiteNavbar = () => {
             <Button 
               variant="cta" 
               size="sm"
-              onClick={() => window.open("https://amazon.com?tag=bestonamz0e-20", "_blank", "nofollow,sponsored,noopener,noreferrer")}
+              onClick={() => window.open("https://amazon.com?tag=bestonamz0e-20", "_blank")}
             >
               Start Shopping
             </Button>
@@ -178,7 +178,7 @@ const SiteNavbar = () => {
                   className="w-full"
                   onClick={() => {
                     setIsOpen(false);
-                    window.open("https://amazon.com?tag=bestonamz0e-20", "_blank", "nofollow,sponsored,noopener,noreferrer");
+                    window.open("https://amazon.com?tag=bestonamz0e-20", "_blank");
                   }}
                 >
                   Start Shopping
