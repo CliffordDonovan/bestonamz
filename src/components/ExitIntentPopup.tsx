@@ -60,7 +60,6 @@ export const ExitIntentPopup = ({ onRedirect, productName, amazonUrl, productIma
 
   const handleRedirect = () => {
     if (amazonUrl) {
-      window.open(amazonUrl, '_blank', 'nofollow,sponsored,noopener,noreferrer');
       onRedirect(amazonUrl);
     }
     setIsOpen(false);
@@ -103,12 +102,15 @@ export const ExitIntentPopup = ({ onRedirect, productName, amazonUrl, productIma
 
         <div className="flex flex-col gap-3">
           <Button
+            asChild
             onClick={handleRedirect}
             className="w-full bg-[#FF9900] hover:bg-[#FF9900]/90 text-white font-semibold justify-center"
             size="lg"
           >
-            Check Amazon Now
-            <ExternalLink className="w-4 h-4 ml-2" />
+            <a href={amazonUrl} target="_blank" rel="nofollow sponsored noopener noreferrer">
+              Check Amazon Now
+              <ExternalLink className="w-4 h-4 ml-2" />
+            </a>
           </Button>
           <Button
             onClick={handleStay}
