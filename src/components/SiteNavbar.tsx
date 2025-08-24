@@ -128,10 +128,16 @@ const SiteNavbar = () => {
           <div className="hidden md:flex items-center gap-4">
             <Button 
               variant="cta" 
-              size="sm" 
-              onClick={() => window.open('https://amazon.com?tag=bestonamz0e-20', '_blank', 'noopener,noreferrer')}
+              size="sm"
+              asChild
             >
-              Start Shopping
+              <a 
+                href="https://amazon.com?tag=bestonamz0e-20" 
+                target="_blank" 
+                rel="nofollow sponsored noopener noreferrer"
+              >
+                Start Shopping
+              </a>
             </Button>
           </div>
 
@@ -175,13 +181,17 @@ const SiteNavbar = () => {
               <div className="pt-4 border-t">
                 <Button 
                   variant="cta" 
-                  className="w-full" 
-                  onClick={() => {
-                    setIsOpen(false);
-                    window.open('https://amazon.com?tag=bestonamz0e-20', '_blank', 'noopener,noreferrer');
-                  }}
+                  className="w-full"
+                  onClick={() => setIsOpen(false)}
+                  asChild
                 >
-                  Start Shopping
+                  <a 
+                    href="https://amazon.com?tag=bestonamz0e-20" 
+                    target="_blank" 
+                    rel="nofollow sponsored noopener noreferrer"
+                  >
+                    Start Shopping
+                  </a>
                 </Button>
               </div>
             </div>

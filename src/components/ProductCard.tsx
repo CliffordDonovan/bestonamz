@@ -77,24 +77,18 @@ export const ProductCard = ({
     <>
       <article
         id={`product-card-${rank}`}
-        className="group hover-scale rounded-lg cursor-pointer"
+        className="group hover-scale rounded-lg"
         role="link"
         tabIndex={0}
         aria-label={`View ${name} details and shop on Amazon`}
-        onClick={(e) => {
-          const target = e.target as HTMLElement;
-          if (target.closest('a, button')) return;
-          window.open(amazonUrl, '_blank', 'noopener,noreferrer');
-        }}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            const target = e.target as HTMLElement;
-            if (target.closest('a, button')) return;
-            e.preventDefault();
-            window.open(amazonUrl, '_blank', 'noopener,noreferrer');
-          }
-        }}
       >
+        <a 
+          href={amazonUrl} 
+          target="_blank" 
+          rel="nofollow sponsored noopener noreferrer"
+          className="block cursor-pointer"
+          aria-label={`View ${name} details and shop on Amazon`}
+        >
         <Card className={cn(
           "overflow-hidden transition-all hover:shadow-glow hover-lift",
           rank === 1 && "ring-2 ring-yellow-400/60 border-yellow-400/40",
@@ -234,6 +228,7 @@ export const ProductCard = ({
             </div>
           </CardContent>
         </Card>
+        </a>
       </article>
 
       {/* Sticky mobile CTA */}

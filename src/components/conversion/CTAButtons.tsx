@@ -12,22 +12,23 @@ interface PrimaryCtaProps {
 }
 
 export const PrimaryCta = ({ amazonUrl, productName, isPrime = true, isUrgent = false, className }: PrimaryCtaProps) => {
-  const handleClick = () => {
-    // Track conversion event here if analytics are set up
-    window.open(amazonUrl, '_blank', 'noopener,noreferrer');
-  };
-
   return (
     <Button
       variant="amazon"
       size="lg"
-      onClick={handleClick}
       className={cn("w-full font-semibold text-base hover-lift", className)}
       aria-label={`Check current price for ${productName} on Amazon`}
+      asChild
     >
-      <ShoppingCart className="w-5 h-5 mr-2" />
-      Check Price on Amazon
-      <ExternalLink className="w-4 h-4 ml-2" />
+      <a 
+        href={amazonUrl} 
+        target="_blank" 
+        rel="nofollow sponsored noopener noreferrer"
+      >
+        <ShoppingCart className="w-5 h-5 mr-2" />
+        Check Price on Amazon
+        <ExternalLink className="w-4 h-4 ml-2" />
+      </a>
     </Button>
   );
 };
@@ -77,20 +78,22 @@ export const SecondaryCta = ({ amazonUrl, productName, variant = 'price', classN
 
   const { icon, text, ariaLabel } = getButtonContent();
 
-  const handleClick = () => {
-    window.open(amazonUrl, '_blank', 'noopener,noreferrer');
-  };
-
   return (
     <Button
       variant="amazonOutline"
       size="lg"
-      onClick={handleClick}
       className={cn("flex-1", className)}
       aria-label={ariaLabel}
+      asChild
     >
-      {icon}
-      <span className="ml-2">{text}</span>
+      <a 
+        href={amazonUrl} 
+        target="_blank" 
+        rel="nofollow sponsored noopener noreferrer"
+      >
+        {icon}
+        <span className="ml-2">{text}</span>
+      </a>
     </Button>
   );
 };
@@ -158,10 +161,16 @@ export const StickyCta = ({ amazonUrl, productName, price, className }: StickyCt
         <Button
           variant="amazon"
           size="default"
-          onClick={() => window.open(amazonUrl, '_blank', 'noopener,noreferrer')}
           className="flex-shrink-0 px-4"
+          asChild
         >
-          Check Price
+          <a 
+            href={amazonUrl} 
+            target="_blank" 
+            rel="nofollow sponsored noopener noreferrer"
+          >
+            Check Price
+          </a>
         </Button>
       </div>
     </div>
