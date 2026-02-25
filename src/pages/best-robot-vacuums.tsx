@@ -6,7 +6,7 @@ const products = [
     rank: 1,
     name: 'Roborock S8 MaxV Ultra',
     tagline: 'Best Overall Robot Vacuum – Fully Hands-Free',
-    image: '/images/Roborock-Saros-Z70.jpg',
+    image: '/images/category-robovac.jpg',
     rating: 4.8,
     price: '$1000-1400',
     pros: [
@@ -72,7 +72,7 @@ const products = [
     rank: 4,
     name: 'Deebot T30S Combo',
     tagline: 'Best for Mixed Carpet and Hard Floor Homes',
-    image: '/images/Deebot-X9.jpg',
+    image: '/images/category-robovac.jpg',
     rating: 4.5,
     price: '$700-900',
     pros: [
