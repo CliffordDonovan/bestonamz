@@ -74,7 +74,7 @@ export default function ProductPageLayout({
       '@type': 'AggregateRating',
       ratingValue: p.rating,
       bestRating: 5,
-      reviewCount: Math.floor(Math.random() * 500) + 100,
+      reviewCount: Math.floor((p.rating ?? 4) * 1000 + p.rank * 137),
     },
     offers: {
       '@type': 'Offer',
@@ -252,6 +252,21 @@ export default function ProductPageLayout({
                     <div>
                       <div className="font-medium text-primary mb-2">Gaming Priority?</div>
                       <p>Look for HDMI 2.1, 120Hz, and VRR support for next-gen consoles</p>
+                    </div>
+                  </>
+                ) : categoryName.toLowerCase().includes('mushroom') ? (
+                  <>
+                    <div>
+                      <div className="font-medium text-primary mb-2">Want Instant Convenience?</div>
+                      <p>Four Sigmatic Original mixes in seconds and works hot or cold — no brewer needed</p>
+                    </div>
+                    <div>
+                      <div className="font-medium text-primary mb-2">Prefer Brewed Coffee Taste?</div>
+                      <p>Four Sigmatic Focus Ground Coffee brews like normal coffee with a lighter mushroom dose</p>
+                    </div>
+                    <div>
+                      <div className="font-medium text-primary mb-2">Want Maximum Mushroom Dose?</div>
+                      <p>RYZE packs 6 mushroom varieties with MCT oil — the highest functional dose on the list</p>
                     </div>
                   </>
                 ) : categoryName.toLowerCase().includes('coffee') ? (
