@@ -91,8 +91,8 @@ const products = [
   },
   {
     rank: 5,
-    name: 'Tineco A11 Hero+ Cordless Stick Vacuum',
-    tagline: 'Best Lightweight Cordless Under $250',
+    name: 'Tineco A11 Pet Cordless Stick Vacuum',
+    tagline: 'Best Lightweight Cordless for Pet Hair Under $250',
     image: '/images/Tineco-A11.jpg',
     rating: 4.3,
     price: '$200-250',

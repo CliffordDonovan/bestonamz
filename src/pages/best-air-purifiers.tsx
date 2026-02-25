@@ -25,7 +25,7 @@ const products = [
   },
   {
     rank: 2,
-    name: 'Levoit Core 300S',
+    name: 'Levoit Core 300-P',
     tagline: 'Best Compact Air Purifier – Bedroom Size, Whisper Quiet',
     image: '/lovable-uploads/2ab6211f-f677-42f8-a103-add64ebbe5c4.png',
     rating: 4.7,
@@ -39,7 +39,7 @@ const products = [
     ],
     cons: [
       'Coverage limited to 219 sq ft — ineffective in open-plan spaces or large living rooms; buy two units rather than buying one and hoping it covers more area',
-      'No real-time air quality display — you cannot see what the sensor is detecting without opening the app'
+      'No real-time air quality display — you cannot see what the sensor is detecting at a glance'
     ],
     amazonUrl: 'https://amazon.com/dp/B07VVK39F7?tag=bestonamz0e-20',
     prime: true,
@@ -47,7 +47,7 @@ const products = [
   },
   {
     rank: 3,
-    name: 'Winix 5500-2',
+    name: 'Winix 5510',
     tagline: 'Best for Pet Owners and Allergy Sufferers',
     image: '/lovable-uploads/6b014776-6582-4f96-b9a8-42d292a8d6b1.png',
     rating: 4.6,
@@ -57,7 +57,7 @@ const products = [
       'PlasmaWave technology generates hydroxyls that neutralize gases and odors at a molecular level — particularly effective for pet odors, VOCs from paint/furniture, and cooking smells that HEPA alone cannot address',
       'Auto mode with sleep setting: runs quietly at night, ramps up when the sensor detects air quality drop from cooking, pets, or outdoor air infiltration',
       'CADR rating of 243 CFM (clean air delivery rate) — independently certified by AHAM, the industry body for air purifier testing. Covers up to 360 sq ft at full speed',
-      'Strong track record: the Winix 5500-2 has been Amazon bestseller in air purifiers for years, with consistent positive reviews across verified buyers'
+      'Strong track record: the Winix 5510 (updated successor to the bestselling 5500-2) has consistent positive reviews and broad verified buyer support'
     ],
     cons: [
       'PlasmaWave mode produces trace levels of ozone (below California safety limits) — can be turned off if ozone sensitivity is a concern; most users leave it on',
@@ -112,8 +112,8 @@ const products = [
   },
   {
     rank: 6,
-    name: 'Blueair Blue Pure 211+',
-    tagline: 'Best Scandinavian Design – Quiet, Powerful, Customizable',
+    name: 'Blueair Blue Pure 211i Max',
+    tagline: 'Best Scandinavian Design – Quiet, Powerful, Smart Auto Mode',
     image: '/lovable-uploads/fc7daeee-686a-4281-8c32-200b23be68fa.png',
     rating: 4.3,
     price: '$250-300',
@@ -125,7 +125,7 @@ const products = [
       'One of the quietest large-room purifiers at medium speed (31 dB)'
     ],
     cons: [
-      'No smart features, app control, or real-time air quality display — manual fan speed only. If you want automation or air quality data, look at the Coway or Winix instead',
+      'App control available but less full-featured than Coway or Winix smart modes — basic scheduling and speed control only',
       'Filter replacements are brand-specific and cost $40–60 per set annually'
     ],
     amazonUrl: 'https://amazon.com/dp/B0BN2MGV5H?tag=bestonamz0e-20',

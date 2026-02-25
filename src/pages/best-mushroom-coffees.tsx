@@ -91,23 +91,23 @@ const products = [
   },
   {
     rank: 5,
-    name: 'Om Mushroom Superfood Master Blend Coffee',
-    tagline: 'Best Value Mushroom Coffee with 10 Mushrooms',
-    image: '/images/foursigmatic-original.jpg',
-    rating: 4.3,
-    price: '$22-28',
+    name: 'OM MUSHROOM SUPERFOOD Instant Coffee',
+    tagline: 'Best Multi-Flavor Mushroom Coffee — 6 Sizes & Flavors',
+    image: '/images/om-mushroom-coffee.jpg',
+    rating: 4.2,
+    price: '$18-36',
     pros: [
-      '10 functional mushroom species in one blend — broadest spectrum available',
-      'NSF certified and third-party tested for purity and potency',
-      'Certified organic, gluten-free, and vegan',
-      'Works hot or cold, blends smoothly into lattes or smoothies',
-      'Significant cost-per-serving savings vs. premium brands'
+      'Organic Arabica coffee base blended with Lion\'s Mane, Cordyceps, Reishi, Turkey Tail, and Ginkgo Biloba',
+      'Available in 6 sizes and 6 flavors — the most format variety of any mushroom coffee on this list',
+      'USDA Organic, non-GMO verified, and third-party tested',
+      'Single-serve packs available for travel or sampling before committing to a full canister',
+      'Good cost-per-serving value at the 30-serving canister size'
     ],
     cons: [
-      'Less brand recognition than RYZE or Four Sigmatic',
-      'Mild coffee flavor — more supplement than coffee experience'
+      'Mushroom doses per serving not individually disclosed on label — harder to compare potency vs. RYZE or Four Sigmatic',
+      'Milder coffee flavor compared to Four Sigmatic Focus Ground'
     ],
-    amazonUrl: 'https://amazon.com/dp/B0CGG395RP?tag=bestonamz0e-20',
+    amazonUrl: 'https://amazon.com/dp/B08PDD2P9N?tag=bestonamz0e-20',
     prime: true,
     award: 'Best Value'
   }

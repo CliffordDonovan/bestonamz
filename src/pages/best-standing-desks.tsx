@@ -3,24 +3,24 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 const products = [
   {
     rank: 1,
-    name: 'FlexiSpot E7 Pro Standing Desk',
-    tagline: 'Best Overall Electric Standing Desk – Stability Champion',
+    name: 'FLEXISPOT EN2 Standing Desk',
+    tagline: 'Best Overall Electric Standing Desk – One-Piece Design with Cable Management',
     image: '/images/FlexispotE6.jpg',
-    rating: 4.8,
-    price: '$400-600',
+    rating: 4.5,
+    price: '$200-280',
     pros: [
-      'Dual-motor triple-stage legs reach 60" height — accommodates users up to 6\'7" standing',
-      'Wobble-free at maximum height: tested at under 1.5mm deflection at the desktop edge, best-in-class for home desks under $600',
-      'Anti-collision sensors detect resistance and stop/reverse — prevents damage to equipment and walls',
-      '4 memory presets with a digital readout — switch from sitting to standing height in 4 seconds',
-      '220 lb weight capacity handles dual monitors, a docking station, and a monitor arm without flex',
-      '15-year frame warranty, 5-year motor warranty — longest standard coverage in the category'
+      'Whole-piece desktop ships pre-assembled with the frame — no need to source or drill into a separate tabletop',
+      'Built-in cable management tray and clamp power strip keeps the desktop wire-free out of the box',
+      'Dual-motor electric adjustment from 28" to 47.6" with 4 programmable memory presets',
+      'Anti-collision sensors detect resistance and stop/reverse — prevents damage to equipment during height transitions',
+      'Holds up to 154 lbs — sufficient for a dual monitor setup, docking station, and peripherals',
+      'Available in 5 frame/top color combinations; compact 48"×30" footprint fits most home offices'
     ],
     cons: [
-      'Ships without a desktop — you need to purchase or source a tabletop separately (common for quality desk frames)',
-      'Assembly takes 45–60 minutes; cable management tray sold separately'
+      'Fixed desktop size — unlike frame-only desks, you cannot swap in a larger or custom tabletop',
+      'Single-stage legs are less stable than triple-stage designs at maximum standing height with heavy loads'
     ],
-    amazonUrl: 'https://amazon.com/dp/B0CWGJCDXX?tag=bestonamz0e-20',
+    amazonUrl: 'https://amazon.com/dp/B09JFYT8TJ?tag=bestonamz0e-20',
     prime: true,
     award: 'Top Pick'
   },

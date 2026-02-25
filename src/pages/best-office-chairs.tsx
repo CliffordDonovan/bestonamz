@@ -71,7 +71,7 @@ const products = [
     rank: 4,
     name: 'Secretlab TITAN Evo',
     tagline: 'Best Gaming Chair That\'s Also Good for Work',
-    image: '/images/TraltChair.jpg',
+    image: '/images/secretlab-titan-evo.jpg',
     rating: 4.6,
     price: '$449-549',
     pros: [
@@ -85,7 +85,7 @@ const products = [
       'Side bolsters are pronounced — may feel constraining for people with wider builds',
       'Cold leather feel in winter; warm in summer — less breathable than mesh office chairs'
     ],
-    amazonUrl: 'https://amazon.com/dp/B0F8VM7HYL?tag=bestonamz0e-20',
+    amazonUrl: 'https://amazon.com/dp/B0B3RL6YFG?tag=bestonamz0e-20',
     prime: true,
     award: 'Best Mid-Range'
   },
@@ -114,7 +114,7 @@ const products = [
     rank: 6,
     name: 'Humanscale Freedom Chair',
     tagline: 'Best Self-Adjusting Ergonomic Chair',
-    image: '/images/Aeron.jpg',
+    image: '/images/humanscale-freedom.jpg',
     rating: 4.5,
     price: '$800-1200',
     pros: [
@@ -128,7 +128,7 @@ const products = [
       'Less adjustability overall than Aeron or Leap — the self-adjusting approach means fewer manual controls',
       'Headrest may interfere with sitting close to a high desk'
     ],
-    amazonUrl: 'https://amazon.com/dp/B01N0ZUN15?tag=bestonamz0e-20',
+    amazonUrl: 'https://amazon.com/dp/B08577W8NB?tag=bestonamz0e-20',
     prime: true,
     award: 'Most Elegant'
   }
