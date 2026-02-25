@@ -164,7 +164,7 @@ export default function BestStandingDesks() {
       description="Discover the best standing desks on Amazon for your home office. Compare top electric and manual standing desks from UPLIFT, FlexiSpot, VIVO, and more with expert reviews and ergonomic guidance."
       products={products}
       category="standing desks"
-      lastUpdated="2024-12-15"
+      lastUpdated="2025-02-25"
       faqs={faqs}
     />
   );

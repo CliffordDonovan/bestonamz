@@ -9,12 +9,15 @@ const SiteFooter = () => {
         <div>
           <h3 className="font-semibold mb-2">Categories</h3>
           <ul className="space-y-1 text-muted-foreground">
-            <li><a href="/best-coffee-grinders" className="hover:underline">Coffee Grinders</a></li>
+            <li><a href="/best-office-chairs" className="hover:underline">Office Chairs</a></li>
+            <li><a href="/best-standing-desks" className="hover:underline">Standing Desks</a></li>
             <li><a href="/best-mushroom-coffees" className="hover:underline">Mushroom Coffee</a></li>
-            <li><a href="/best-pimple-patches" className="hover:underline">Pimple Patches</a></li>
+            <li><a href="/best-coffee-grinders" className="hover:underline">Coffee Grinders</a></li>
             <li><a href="/best-robot-vacuums" className="hover:underline">Robot Vacuums</a></li>
             <li><a href="/best-stick-vacuums-mop" className="hover:underline">Stick Vacuums</a></li>
             <li><a href="/best-tvs" className="hover:underline">TVs</a></li>
+            <li><a href="/best-air-purifiers" className="hover:underline">Air Purifiers</a></li>
+            <li><a href="/best-pimple-patches" className="hover:underline">Pimple Patches</a></li>
           </ul>
         </div>
         <div>

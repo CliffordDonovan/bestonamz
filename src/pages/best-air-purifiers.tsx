@@ -162,7 +162,7 @@ export default function BestAirPurifiers() {
       description="Discover the best air purifiers on Amazon for allergies, pets, and clean air. Compare top HEPA air purifiers from Coway, Levoit, Dyson, and more with expert reviews and buying guides."
       products={products}
       category="air purifiers"
-      lastUpdated="2024-12-15"
+      lastUpdated="2025-02-25"
       faqs={faqs}
     />
   );

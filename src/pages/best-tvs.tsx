@@ -142,7 +142,7 @@ export default function BestTVs() {
       description="Find the best TVs on Amazon. Compare top-rated models from Sony, LG, Hisense, Samsung, and Amazon with OLED, QD-OLED, and Mini-LED technology for every budget and room size."
       products={products}
       category="TVs"
-      lastUpdated="2024-12-15"
+      lastUpdated="2025-02-25"
       faqs={faqs}
     />
   );

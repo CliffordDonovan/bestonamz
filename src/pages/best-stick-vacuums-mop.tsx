@@ -136,7 +136,7 @@ export default function BestStickVacuumsMop() {
       description="Find the best vacuum and mop combo machines on Amazon. Compare top-rated 2-in-1 cleaning solutions from Tineco, Bissell, Shark, and Hoover that vacuum and mop simultaneously for effortless floor cleaning."
       products={products}
       category="vacuum mop combos"
-      lastUpdated="2024-12-15"
+      lastUpdated="2025-02-25"
       faqs={faqs}
     />
   );

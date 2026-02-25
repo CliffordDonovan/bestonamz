@@ -117,7 +117,7 @@ export default function BestPimplePatches() {
       description="Find the best pimple patches on Amazon. Compare top-rated acne patches from COSRX, Mighty Patch, Rael, and more to quickly treat whiteheads and blemishes overnight."
       products={products}
       category="pimple patches"
-      lastUpdated="2024-12-15"
+      lastUpdated="2025-02-25"
       faqs={faqs}
     />
   );

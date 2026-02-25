@@ -161,7 +161,7 @@ export default function BestOfficeChairs() {
       description="Discover the best office chairs on Amazon for ergonomic comfort and productivity. Compare top-rated chairs from Herman Miller, Steelcase, Secretlab, and more with expert reviews and buying guides."
       products={products}
       category="office chairs"
-      lastUpdated="2024-12-15"
+      lastUpdated="2025-02-25"
       faqs={faqs}
     />
   );

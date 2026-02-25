@@ -158,7 +158,7 @@ export default function BestRobotVacuums() {
       description="Discover the best robot vacuums on Amazon. Compare top-rated models from Roborock, Dreame, Narwal, and DEEBOT with advanced features like robotic arms, self-emptying, and intelligent mapping."
       products={products}
       category="robot vacuums"
-      lastUpdated="2024-12-15"
+      lastUpdated="2025-02-25"
       faqs={faqs}
     />
   );

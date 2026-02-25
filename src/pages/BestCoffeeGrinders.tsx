@@ -156,7 +156,7 @@ export default function BestCoffeeGrinders() {
       description="Our coffee experts tested 25+ grinders over 6 months. These 6 winners deliver exceptional coffee quality, value, and reliability for every brewing method and budget."
       products={products}
       category="Coffee Grinders"
-      lastUpdated="2024-12-15"
+      lastUpdated="2025-02-25"
       faqs={faq}
     />
   );

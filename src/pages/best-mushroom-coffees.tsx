@@ -113,7 +113,7 @@ export default function BestMushroomCoffees() {
       description="Compare the best mushroom coffee blends on Amazon. Discover adaptogenic brews from Four Sigmatic, RYZE, and more to boost focus and immunity without the crash."
       products={products}
       category="mushroom coffee"
-      lastUpdated="2024-12-15"
+      lastUpdated="2025-02-25"
       faqs={faqs}
     />
   );
