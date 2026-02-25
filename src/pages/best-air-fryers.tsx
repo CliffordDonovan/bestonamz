@@ -126,7 +126,7 @@ const faqs = [
   },
   {
     question: "Single basket vs dual basket: which is better?",
-    answer: "Dual basket air fryers like the Ninja DualZone are transformative for households that cook complete meals. The ability to cook chicken and fries simultaneously — each at the right temperature — and have them finish at exactly the same time is genuinely useful. For people who mostly cook for 1–2 people or use the air fryer for snacks and reheating, a single basket is simpler and takes up less space. The dual basket models are meaningfully larger (plan for 15" of counter space) and more expensive. The decision comes down to: do you use it for complete dinners (dual basket worth it) or as a snack/reheat appliance (single basket is enough)."
+    answer: "Dual basket air fryers like the Ninja DualZone are transformative for households that cook complete meals. The ability to cook chicken and fries simultaneously — each at the right temperature — and have them finish at exactly the same time is genuinely useful. For people who mostly cook for 1–2 people or use the air fryer for snacks and reheating, a single basket is simpler and takes up less space. The dual basket models are meaningfully larger (plan for 15 inches of counter space) and more expensive. The decision comes down to: do you use it for complete dinners (dual basket worth it) or as a snack/reheat appliance (single basket is enough)."
   },
   {
     question: "How does an air fryer compare to a convection oven?",
