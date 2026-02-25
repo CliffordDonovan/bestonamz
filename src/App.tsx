@@ -16,6 +16,8 @@ import BestTVs from "./pages/best-tvs";
 import BestAirPurifiers from "./pages/best-air-purifiers";
 import BestStandingDesks from "./pages/best-standing-desks";
 import BestOfficeChairs from "./pages/best-office-chairs";
+import BestAirFryers from "./pages/best-air-fryers";
+import BestElectricToothbrushes from "./pages/best-electric-toothbrushes";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +39,8 @@ const App = () => (
             <Route path="/best-air-purifiers" element={<BestAirPurifiers />} />
             <Route path="/best-standing-desks" element={<BestStandingDesks />} />
             <Route path="/best-office-chairs" element={<BestOfficeChairs />} />
+            <Route path="/best-air-fryers" element={<BestAirFryers />} />
+            <Route path="/best-electric-toothbrushes" element={<BestElectricToothbrushes />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

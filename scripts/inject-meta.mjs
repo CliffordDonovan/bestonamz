@@ -77,6 +77,18 @@ const routes = [
     description:
       'Discover the best stick vacuums and mop combos on Amazon in 2025. We ranked top cordless models from Dyson, Shark, Tineco, and Bissell — with suction tests and direct Amazon links.',
   },
+  {
+    path: 'best-air-fryers',
+    title: 'Best Air Fryers on Amazon (2025): Tested & Ranked by Size',
+    description:
+      'Find the best air fryers on Amazon in 2025. We ranked top models from Ninja, Cosori, and Instant Pot by capacity, crispiness, and value — with honest size guidance for every household.',
+  },
+  {
+    path: 'best-electric-toothbrushes',
+    title: 'Best Electric Toothbrushes on Amazon (2025): Oral-B vs Sonicare Ranked',
+    description:
+      'Find the best electric toothbrushes on Amazon in 2025. We compared Oral-B iO, Sonicare ProtectiveClean, and budget models on plaque removal, pressure sensors, and value.',
+  },
 ];
 
 function escapeForAttr(str) {

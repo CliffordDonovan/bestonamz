@@ -18,6 +18,8 @@ const SiteFooter = () => {
             <li><a href="/best-tvs" className="hover:underline">TVs</a></li>
             <li><a href="/best-air-purifiers" className="hover:underline">Air Purifiers</a></li>
             <li><a href="/best-pimple-patches" className="hover:underline">Pimple Patches</a></li>
+            <li><a href="/best-air-fryers" className="hover:underline">Air Fryers</a></li>
+            <li><a href="/best-electric-toothbrushes" className="hover:underline">Electric Toothbrushes</a></li>
           </ul>
         </div>
         <div>
