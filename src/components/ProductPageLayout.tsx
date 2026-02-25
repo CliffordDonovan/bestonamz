@@ -1,4 +1,5 @@
 import SEO from "@/components/SEO";
+import { useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/ProductCard";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
@@ -45,7 +46,8 @@ export default function ProductPageLayout({
   lastUpdated,
   faqs
 }: ProductPageLayoutProps) {
-  const canonical = `https://www.bestonamz.com${window.location.pathname}`;
+  const { pathname } = useLocation();
+  const canonical = `https://www.bestonamz.com${pathname}`;
   const pageTitle = title;
   const pageSubtitle = description;
   const breadcrumbCategory = category;
